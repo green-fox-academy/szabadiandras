@@ -13,3 +13,6 @@ The patchwork fork
 Link to the .io website
 [myFirstWebsite - 0. week homework] (https://github.com/szabadiandras/szabadiandras.github.io "szabadiandras.github.io"
 
+[arbitrary case-insensitive reference text]: https://www.mozilla.org
+[1]: http://slashdot.org
+[link text itself]: http://www.reddit.com
