@@ -1,21 +1,15 @@
-[I'm an inline-style link](https://www.google.com)
+Link to week-01/day-01 
+[week-01/day-01] (https://github.com/green-fox-academy/szabadiandras/tree/master/week-01/day-01 "w1d1")
 
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+Link to greenfox folder
+[greenfox] (https://github.com/green-fox-academy/szabadiandras/tree/master/week-01/day-02/greenfox "greenfox")
 
-[I'm a reference-style link][Arbitrary case-insensitive reference text]
+The git lesson repository
+[git-lesson-repository] (https://github.com/green-fox-academy/szabadiandras/tree/master/week-01/day-02/greenfox/git-lesson-repository "git-lesson-repository")
 
-[I'm a relative reference to a repository file](../blob/master/LICENSE)
+The patchwork fork
+[patchwork] (https://github.com/szabadiandras/patchwork "patchwork fork from jlord.github.io")
 
-[You can use numbers for reference-style link definitions][1]
+Link to the .io website
+[myFirstWebsite - 0. week homework] (https://github.com/szabadiandras/szabadiandras.github.io "szabadiandras.github.io"
 
-Or leave it empty and use the [link text itself].
-
-URLs and URLs in angle brackets will automatically get turned into links. 
-http://www.example.com or <http://www.example.com> and sometimes 
-example.com (but not on Github, for example).
-
-Some text to show that the reference links can follow later.
-
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
-[1]: http://slashdot.org
-[link text itself]: http://www.reddit.com
