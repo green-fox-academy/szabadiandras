@@ -16,4 +16,4 @@ let myHeight: number = 1.78;
 console.log(myHeight);
 
 let myStatus: boolean = false;
-console.log(myStatus); 
+console.log(myStatus);
