@@ -1,23 +1,23 @@
-'use strict';
+    'use strict';
 
-let a: number = 3;
+let aa: number = 3;
 // make it bigger by 10
-a = a + 10;
+aa = aa + 10;
 console.log(a);
 
-let b: number = 100;
+let bb: number = 100;
 // make it smaller by 7
-b = b - 7;
+bb = bb - 7;
 console.log(b);
 
-let c: number = 44;
+let cc: number = 44;
 // double c's value
-c = c * 2;
+cc = cc * 2;
 console.log(c);
 
-let d: number = 125;
+let dd: number = 125;
 // divide d's value by 5
-d = d / 5;
+dd = dd / 5;
 console.log(d);
 
 let e: number = 8;
