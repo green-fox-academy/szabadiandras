@@ -5,6 +5,7 @@ let multiplier2: number;
 for (let multiplier2: number = 1; multiplier2 <= 5; multiplier2++){
     //let value2 = multiplier2 + number2
     //console.log(value2);
+    return multiplier2;
     console.log(multiplier2);
 }
 
