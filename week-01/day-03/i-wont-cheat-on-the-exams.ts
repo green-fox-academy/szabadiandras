@@ -2,7 +2,7 @@
 
 let aaa: number = 1;
 let noCheat: string = 'I won\'t cheat on the exam!';
-while (aaa < 101) {
+while (aaa <= 100) {
   console.log(noCheat);
   aaa++;
 }
