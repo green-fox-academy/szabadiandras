@@ -3,22 +3,22 @@
 let aa: number = 3;
 // make it bigger by 10
 aa = aa + 10;
-console.log(a);
+console.log(aa);
 
 let bb: number = 100;
 // make it smaller by 7
 bb = bb - 7;
-console.log(b);
+console.log(bb);
 
 let cc: number = 44;
 // double c's value
 cc = cc * 2;
-console.log(c);
+console.log(cc);
 
 let dd: number = 125;
 // divide d's value by 5
 dd = dd / 5;
-console.log(d);
+console.log(dd);
 
 let e: number = 8;
 // what's the cube of e's value?
