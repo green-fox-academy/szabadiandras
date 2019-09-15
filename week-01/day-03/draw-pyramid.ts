@@ -10,22 +10,23 @@
 //
 // The pyramid should have as many lines as lineCount is
 
-let lineCount: number = 80;
-let actCount = lineCount * 2;
-let star = '*';
-let lineMinus: number;
+let lineCount = 4;
+let actLine = 0;
+let star = "*";
+let space= " ";
+let lines = "\n";
 
-function pyramid (star, actCount) {
-    let thePyramid = "";
-    for (let starNum: number = 1; starNum <= actCount; starNum++) {
-        thePyramid += star;
-        }
-        console.log(thePyramid);
+function pyramid(actLine){
+  if(actLine < lineCount){    
+    let i: number;
+    for (i=0;i<lineCount-actLine-1;i++) lines+=space;
+    for (i=0;i<=actLine*2;i++) lines+=star;
+    for (i=0;i<lineCount-actLine-1;i++) lines+=space;
+    lines+="\n"
+    pyramid(++actLine);
+  }else{
+    console.log(lines)    
+  }    
+ 
 }
-    for (let lineMinus: number = 1; lineMinus <= actCount; lineMinus++) {
-        if (lineMinus % 2 !== 0) {
-            pyramid(star, lineMinus++);
-        } else if (lineMinus == 1) {
-            pyramid(star, lineMinus++);
-        }
-}
+pyramid(actLine);
