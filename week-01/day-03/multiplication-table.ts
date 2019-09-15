@@ -1,6 +1,6 @@
 'use strict';
 
-let number: number = 10;
+let number: number = 15;
 let multiplier: number;
 for (let multiplier: number = 1; multiplier <= 10; multiplier++){
     let value = multiplier * number
