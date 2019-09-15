@@ -13,7 +13,7 @@
 //
 // The diamond should have as many lines as lineCount is
 
-let lineCount = 7;
+let lineCount = 5;
 let actLine = 0;
 let star = "*";
 let space= " ";
