@@ -7,6 +7,6 @@
 
 let integers = [4, 5, 6, 7];
 
-integers.forEach(function(nums) {
+integers.forEach(function (nums) {
     console.log(nums);
 });

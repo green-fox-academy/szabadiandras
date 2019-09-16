@@ -16,4 +16,3 @@ console.log(abc);
 // abc[0] = abc[2];
 // abc.splice(2, 1, 'Arthur');
 // console.log(abc);
-

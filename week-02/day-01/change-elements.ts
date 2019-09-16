@@ -6,14 +6,23 @@
 
 let numList = [1, 2, 3, 8, 5, 6];
 
-let numListNew = numList.map(number => {
-
-    if (number === 8) {
-        
+numList = numList.map(function (origin) {
+    if (origin === 8) {
         return 4;
-
-    } return number;
-
+    } return origin;
 });
+console.log(numList);
 
-    console.log(numListNew);
+// let mikiList = [1, 2, 3, 8, 5, 6];
+// 
+// mikiList.forEach(function(val,index){
+//     if(val == 8){
+//         mikiList[index] = 4;
+//     }
+// });
+// console.log(mikiList);
+
+
+
+// function valami(number)
+// number => 
