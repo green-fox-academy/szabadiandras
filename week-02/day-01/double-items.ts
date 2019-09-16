@@ -4,3 +4,13 @@
 
 
 let drinks = ['Gin', 'Whiskey', 'Wine', 'Beer'];
+
+let alcohol = drinks.map(string => {
+    return string + string
+})
+    console.log(alcohol);
+
+/*  drinks.forEach(function (alcohol){
+      drinks
+      console.log(alcohol);
+  }); */

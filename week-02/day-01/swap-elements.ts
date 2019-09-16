@@ -6,8 +6,14 @@
 let abc = ["Arthur", "Boe", "Chloe"]
 console.log(abc);
 
+let temp = abc[0];
 abc[0] = abc[2];
-abc.splice(2, 1, 'Arthur');
+abc[2] = temp;
+
 console.log(abc);
 
-// how to change Arthur with numbers?
+
+// abc[0] = abc[2];
+// abc.splice(2, 1, 'Arthur');
+// console.log(abc);
+
