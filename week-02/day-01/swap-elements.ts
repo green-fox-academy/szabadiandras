@@ -7,5 +7,7 @@ let abc = ["Arthur", "Boe", "Chloe"]
 console.log(abc);
 
 abc[0] = abc[2];
-abc[2] = abc[0];
+abc.splice(2, 1, 'Arthur');
 console.log(abc);
+
+// review
