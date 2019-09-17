@@ -22,4 +22,22 @@
 //      William
 // Remove all elements
 
-let names = [''];
+let list = [];
+    console.log(list.length);
+list.push ('William');
+    console.log(list);
+
+    if (list.length <= 0) {
+        console.log('The list is empty.');
+    } else {
+        console.log('The list is NOT empty.');
+    }
+    list.push ('John');
+    list.push ('Amanda');
+    console.log(list.length-1);
+console.log(list[2]);
+
+// for (let i: number = 0; i < list.length; i++) {
+//     console.log([list[i]);
+// 
+// }

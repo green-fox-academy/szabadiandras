@@ -13,4 +13,4 @@ function reverse(string) {
 }
 
 console.log(reverse(reversed));
-export = reverse;
+export = reverse;   
