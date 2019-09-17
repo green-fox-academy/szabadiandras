@@ -12,3 +12,22 @@
 //
 // * size should depend on a variable
 // ** Relax, a matrix is just like an array
+
+let matrixSize = 4;
+let matrixArray = [];
+
+for(i=matrixSize-1; i>=0; i--){
+    let tempArray = [];
+
+    for(j=matrixSize-1; j>=0; j--){
+        if (i==j) {
+            tempArray[j] = 1;
+        }else{
+            tempArray[j] = 0;
+        }
+    }
+
+    matrixArray.push(tempArray);
+}
+
+console.log(matrixArray);

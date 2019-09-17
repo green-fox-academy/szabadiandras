@@ -13,14 +13,14 @@ numList = numList.map(function (origin) {
 });
 console.log(numList);
 
-// let mikiList = [1, 2, 3, 8, 5, 6];
+// let mList = [1, 2, 3, 8, 5, 6];
 // 
-// mikiList.forEach(function(val,index){
+// mList.forEach(function(val,index){
 //     if(val == 8){
-//         mikiList[index] = 4;
+//         mList[index] = 4;
 //     }
 // });
-// console.log(mikiList);
+// console.log(mList);
 
 
 
