@@ -5,8 +5,8 @@
 // -  Add all elements an `"a"` at the end
 
 let animals = ["koal", "pand", "zebr"];
-animals = animals.map(string => {
-        return string + 'a'
+animals = animals.map(stringElement => {
+        return stringElement + 'a'
 })
    console.log(animals);
 

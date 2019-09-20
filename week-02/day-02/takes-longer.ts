@@ -7,8 +7,7 @@ let quote: string = `Hofstadter's Law: It you expect, even when you take into ac
 
 let indexIt = quote.indexOf('It')
 let indexYou = quote.indexOf('you');
-
-console.log(indexIt);
-console.log(indexYou);
-
+ 
+quote = quote.substring(0, indexIt+3) + "always takes longer than" + quote.substring(indexYou-1);
+ 
 console.log(quote);

@@ -12,6 +12,7 @@ numList = numList.map(function (origin) {
     } return origin;
 });
 console.log(numList);
+console.log(numList[3]);
 
 // let mList = [1, 2, 3, 8, 5, 6];
 // 

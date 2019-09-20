@@ -19,34 +19,17 @@ let star = "*";
 let space= " ";
 let lines = "\n";
 
-function pyramid(actLine){
+function diamond(actLine){
   if(actLine < lineCount){    
     let i: number;
     for (i=0;i<lineCount-actLine-1;i++) lines+=space;
     for (i=0;i<=actLine*2;i++) lines+=star;
     for (i=0;i<lineCount-actLine-1;i++) lines+=space;
     lines+="\n"
-    pyramid(++actLine);
+    diamond(++actLine);
   }else{
     //console.log(lines)    
   }    
  
 }
-pyramid(actLine);
-
-
-
-function pyramid2(actLine){
-    if(actLine < lineCount){    
-      let i: number;
-      for (i=0;i<lineCount-actLine-1;i++) lines+=space;
-      for (i=0;i<=actLine*2;i++) lines+=star;
-      for (i=0;i<lineCount-actLine-1;i++) lines+=space;
-      lines+="\n"
-      pyramid2(++actLine);
-    }else{
-      console.log(lines)    
-    }    
-   
-  }
-  pyramid2(actLine);
+diamond(actLine);

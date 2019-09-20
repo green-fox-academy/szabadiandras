@@ -13,21 +13,41 @@
 // * size should depend on a variable
 // ** Relax, a matrix is just like an array
 
-let matrixSize = 4;
-let matrixArray = [];
+// let matrixSize = 4;
+// let matrixArray = [];
+// 
+// for(let i=matrixSize-1; i>=0; i--){
+//     let tempArray = [];
+// 
+//     for(let j=matrixSize-1; j>=0; j--){
+//         if (i==j) {
+//             tempArray[j] = 1;
+//         }else{
+//             tempArray[j] = 0;
+//         }
+//     }
+// 
+//     matrixArray.push(tempArray);
+// }
+// 
+// console.log(matrixArray);
 
-for(i=matrixSize-1; i>=0; i--){
-    let tempArray = [];
 
-    for(j=matrixSize-1; j>=0; j--){
+let matrixSize = 10;
+let matrix: string = "";
+
+for(let i=1; i<=matrixSize; i++){
+    let row = "";
+
+    for(let j=1; j<=matrixSize; j++){
         if (i==j) {
-            tempArray[j] = 1;
+            row = row + "1 ";
         }else{
-            tempArray[j] = 0;
+            row = row + "0 ";
         }
     }
 
-    matrixArray.push(tempArray);
+    matrix = matrix + row + "\n";
 }
 
-console.log(matrixArray);
+console.log(matrix);

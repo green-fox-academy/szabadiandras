@@ -19,7 +19,7 @@ if (10 < b && b < 20) {
     out2 = 'Sweet!'
 } else if (b < 10) {
     out2 = 'Less!'
-} else {
+} else if (b > 20) {
     out2 = 'More!'
 }
 
@@ -34,24 +34,25 @@ let credits: number = 100;
 let isBonus: boolean = false;
 
 if (credits >= 50 && isBonus === false) {
-    console.log('The result is: ' + (c - 2))
+    c = c - 2;
 } else if (credits < 50 && isBonus === false) {
-    console.log('The result is: ' + (c - 1))
-} else {
-    console.log(c)
-}
+    c = c - 1;
+};
+console.log(c);
 
 // if credits are at least 50,
 // and is_bonus is false decrement c by 2
+
 // if credits are smaller than 50,
 // and is_bonus is false decrement c by 1
+
 // if is_bonus is true c should remain the same
 
 let d: number =  8;
 let time: number = 120;
 let out3: string = '';
 
-if (d % 4 === 0 && time < 200) {
+if (d % 4 === 0 && time <= 200) {
     out3 = 'check'
 } else if (time > 200) {
     out3 = 'Time out'
@@ -64,6 +65,7 @@ console.log(out3)
 // if d is dividable by 4
 // and time is not more than 200
 // set out3 to "check"
+
 // if time is more than 200
 // set out3 to "Time out"
 // otherwise set out3 to "Run Forest Run!"

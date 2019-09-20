@@ -11,6 +11,9 @@
 //  - Download games
 //      - Diablo
 
-let todoText: string = ' - Buy milk\n';
 
-console.log(todoText);
+let todoText: string = ' - Buy milk\n';
+let mylist: string[] = ['My todo:', ' - Buy milk', ' - Download games', '\t - Diablo']
+for (let i = 0; i <= mylist.length-1; i++) { 
+    console.log(mylist[i]);
+}

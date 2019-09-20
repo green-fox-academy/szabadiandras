@@ -8,7 +8,7 @@
 let fizzNumber: number = 100;
 let buzzNumber: number = 1;
 
-for (let buzzNumber: number = 1; buzzNumber <= fizzNumber; buzzNumber++) {
+for (buzzNumber; buzzNumber <= fizzNumber; buzzNumber++) {
     
     if (buzzNumber % 5 == 0 && buzzNumber % 3 == 0) {
         console.log("FizzBuzz");
