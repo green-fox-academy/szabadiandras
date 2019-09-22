@@ -27,5 +27,5 @@ function hLines(x: number, y: number) {
 }
 
 for (let i = 0; i < 3; + i++) {
-    hLines(Math.random() * 250, Math.random() * 300);
-}
+    hLines(Math.random() * canvas.width, Math.random() * canvas.height);
+};

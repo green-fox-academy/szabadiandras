@@ -11,6 +11,13 @@ const ctx = canvas.getContext('2d');
 // Draw at least 3 lines with that function using a loop.
 
 
+function randomColor() {
+    let r = 255*Math.random()|0,
+        g = 255*Math.random()|0,
+        b = 255*Math.random()|0;
+    return 'rgb(' + r + ',' + g + ',' + b + ')';
+};
+
 function singleLine(x: number, y: number) {
     ctx.strokeStyle = randomColor()
     ctx.beginPath();
@@ -18,13 +25,7 @@ function singleLine(x: number, y: number) {
     ctx.moveTo (x, y);
     ctx.lineTo(canvas.width / 2, canvas.height / 2);
     ctx.stroke();
-};
-function randomColor() {
-        let r = 255*Math.random()|0,
-            g = 255*Math.random()|0,
-            b = 255*Math.random()|0;
-        return 'rgb(' + r + ',' + g + ',' + b + ')';
-    };
+}
 
     /* let colooo = `rgb(${Math.random()*255$, {Math.random()*255$},{Math.random()*255)}` */
     

@@ -8,27 +8,11 @@ const ctx = canvas.getContext('2d');
 // Draw four different size and color rectangles.
 // Avoid code duplication.
 
-/* ctx.fillStyle = 'green';
-ctx.fillRect(200, 100, 30, 30);
+let colors = ['yellow', 'blue', 'green', 'red'];
+let boxNumber = 4;
+let size = 250;
 
-ctx.fillStyle = 'blue';
-ctx.fillRect(300, 250, 50, 50);
-
-ctx.fillStyle = 'red';
-ctx.fillRect(200, 200, 60, 60); */
-
-let c = ['red', 'blue', 'green', 'yellow'];
-
-function fourBoxes(c:string, s:number, t:number, w:number, h:number) {
-    ctx.fillStyle = c;
-    ctx.fillRect(s, t, w, h);
-};
-
-fourBoxes(c[0], 100, 100, 50, 50);
-fourBoxes(c[1], 200, 150, 70, 70);
-fourBoxes(c[2], 300, 200, 85, 85);
-fourBoxes(c[3], 400, 250, 100, 100);
-
-for (let i = 0; i < 3; + i++) {
-   
+for (let i: number = 0; i < boxNumber; i++) {
+    ctx.fillStyle = colors[i];
+    ctx.fillRect(Math.random()*size, Math.random()*size, Math.random()*size, Math.random()*size);
 };
