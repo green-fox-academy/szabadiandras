@@ -12,13 +12,14 @@ const ctx = canvas.getContext('2d');
 // Avoid code duplication.
 
 let colors = ['red', 'green', 'blue'];
+let sizeOf = 150;
 
 function centerBox (size) {
     ctx.fillStyle = colors[i];
     ctx.fillRect((canvas.width-size)/2, (canvas.height-size)/2, size, size);
 }
 
-let value:number = 150;
+let value:number = sizeOf;
 for (let i: number = 0; i < 3; i++) {
     centerBox(value);
     value = value - 50;

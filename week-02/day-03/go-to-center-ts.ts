@@ -26,8 +26,6 @@ function singleLine(x: number, y: number) {
     ctx.lineTo(canvas.width / 2, canvas.height / 2);
     ctx.stroke();
 }
-
-    /* let colooo = `rgb(${Math.random()*255$, {Math.random()*255$},{Math.random()*255)}` */
     
 for (let i = 0; i < 1; + i++) {
         singleLine(canvas.width, Math.ceil(Math.random() * canvas.height));

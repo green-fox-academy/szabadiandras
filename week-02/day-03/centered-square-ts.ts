@@ -7,5 +7,7 @@ const ctx = canvas.getContext('2d');
 
 // Draw a green 10x10 square to the center of the canvas.
 // 
- ctx.fillStyle = 'green';
- ctx.fillRect((canvas.width-10)/2, (canvas.height-10)/2, 10, 10);
+ 
+let centeredSquareSize: number = 10;
+ctx.fillStyle = 'green';
+ ctx.fillRect((canvas.width-centeredSquareSize)/2, (canvas.height-centeredSquareSize)/2, centeredSquareSize, centeredSquareSize);

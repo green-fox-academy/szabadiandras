@@ -3,7 +3,7 @@
 const canvas = document.querySelector('.main-canvas') as HTMLCanvasElement;
 const ctx = canvas.getContext('2d');
 
-// let lineColor: string[] = ['green', 'purple']
+// Green
 
 function star(moveToX, moveToY, lineToX, lineToY) {
     ctx.strokeStyle = 'green';
@@ -31,9 +31,7 @@ for (let i = 0; i < canvas.height/lineCount; i++) {
 
 };
 
-
-// Purple envelope
-
+// Purple
 
 function star2(moveToX2, moveToY2, lineToX2, lineToY2) {
     ctx.strokeStyle = 'purple';
