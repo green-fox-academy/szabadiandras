@@ -17,13 +17,9 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 let starCount: number = 100;
 let starSize = 10;
 let canvasSize = canvas.width*canvas.height
+let starColor = ['#505050', '#707070', '#B8B8B8', '#E8E8E8', '#F8F8F8']
+
 for (let i: number = 0; i <= starCount; i++) {
-    ctx.fillStyle = 'white';
+    ctx.fillStyle =  starColor[Math.floor(Math.random() * starColor.length)];
     ctx.fillRect(Math.random()*canvas.width, Math.random()*canvas.height, starSize, starSize);
 }
-
-
-// function randomStars(x, y, starWidth, starHeight) {
-//     
-// }
-
