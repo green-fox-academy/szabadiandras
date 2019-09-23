@@ -6,7 +6,7 @@ const ctx = canvas.getContext('2d');
 // Green
 
 function star(moveToX, moveToY, lineToX, lineToY) {
-    ctx.strokeStyle = 'green';
+    ctx.strokeStyle = '#2fd33e';
     ctx.beginPath();
     ctx.moveTo(moveToX, moveToY);
     ctx.lineTo(lineToX, lineToY);
@@ -34,7 +34,7 @@ for (let i = 0; i < canvas.height/lineCount; i++) {
 // Purple
 
 function star2(moveToX2, moveToY2, lineToX2, lineToY2) {
-    ctx.strokeStyle = 'purple';
+    ctx.strokeStyle = '#ad1af3';
     ctx.beginPath();
     ctx.moveTo(moveToX2, moveToY2);
     ctx.lineTo(lineToX2, lineToY2);
