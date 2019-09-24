@@ -11,7 +11,7 @@ const fs = require('fs');
 
 function manipulate(fileName: string, inputName: string) {
     try {
-        let data = fs.readF ileSync(file, 'utf8');
+        let data = fs.readFileSync(file, 'utf8');
         fs.writeFileSync(fileName, inputName);
     }
     catch (error) {

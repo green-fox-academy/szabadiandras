@@ -13,13 +13,18 @@ const fs = require('fs');
 // The function should not raise any errors if it could not write the file.
 
 function mutiple(path: string, word: string, number: number) {
+
     try {
-        let content = fs.readFileSync('apples.txt', 'utf8');
-        fs.writeFileSyns ('apples.txt', word);
+        for (let i = 0; i <= number; i++) {
+        let content = fs.readFileSync(path + filename, 'utf8');
+        fs.writeFileSync (path + filename, word + '\r\n');
+        }
     }
-    catch {};
+    catch {
+        console.log('Cannot write document: ' + filename)
+    }
 }
 
-let number: number = 5;
-let word: string = 'apple' 
-let path: string = 'C:\Users\Szabadi András\Documents\Documents\Green Fox Academy\szabadiandras\week-03\day-02\apple'
+let filename: string = 'apples.txt'
+
+mutiple('C:/Users/Szabadi András/Documents/Documents/Green Fox Academy/szabadiandras/week-03/day-02/apple/', 'Apple', 5);
