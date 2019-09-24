@@ -8,7 +8,6 @@ const fs = require('fs');
 // It should return a boolean that shows if the copy was successful
 
 function copyFunction(copyFrom: string, copyTo: string) {
-
     try {
         let content: any[] = [];
         let data = fs.readFileSync(copyFrom, 'utf8');
@@ -16,7 +15,7 @@ function copyFunction(copyFrom: string, copyTo: string) {
         return true;
     }
     catch(error) {
-        console.log('Task failed')
+        console.log('Task failed');
         return false;
     }
 }
