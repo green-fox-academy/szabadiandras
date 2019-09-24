@@ -11,7 +11,7 @@ const fs = require('fs');
 
 function manipulate(fileName: string, inputName: string) {
     try {
-        let data = fs.readFileSync(file, 'utf8');
+        let data = fs.readFileSync(fileName, 'utf8');
         fs.writeFileSync(fileName, inputName);
     }
     catch (error) {
@@ -19,7 +19,7 @@ function manipulate(fileName: string, inputName: string) {
     }
 }
 
-let file: string = 'myfile.txt'
-let name: string = 'Andras Szabadi'
+let fileName: string = 'myfile.txt'
+let inputName: string = 'Andras Szabadi'
 
-manipulate(file, name);
+manipulate(fileName, inputName);

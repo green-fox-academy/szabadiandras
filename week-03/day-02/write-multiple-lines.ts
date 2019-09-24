@@ -15,16 +15,20 @@ const fs = require('fs');
 function mutiple(path: string, word: string, number: number) {
 
     try {
-        for (let i = 0; i <= number; i++) {
-        let content = fs.readFileSync(path + filename, 'utf8');
-        fs.writeFileSync (path + filename, word + '\r\n');
+        let array: string[] = [];
+        for (let i = 0; i <= number-1; i++) {
+            array.push(word);
+            let newArray = array.join('\r\n');
+            console.log(array);
+            let content = fs.readFileSync(path + filename, 'utf8');
+            fs.writeFileSync (path + filename, newArray);
         }
     }
-    catch {
-        console.log('Cannot write document: ' + filename)
-    }
+    catch {}
 }
 
-let filename: string = 'apples.txt'
+let filename: string = 'apples.txt';
+let counter: number = 5;
+let word: string = 'Apple';
 
-mutiple('C:/Users/Szabadi András/Documents/Documents/Green Fox Academy/szabadiandras/week-03/day-02/apple/', 'Apple', 5);
+mutiple('C:/Users/Szabadi András/Documents/Documents/Green Fox Academy/szabadiandras/week-03/day-02/apple/', word, counter);
