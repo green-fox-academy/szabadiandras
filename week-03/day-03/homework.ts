@@ -10,7 +10,7 @@
 // age
 // sex
 // you can use just variables, or lists and/or maps
-
+/*
 let values: string[] = ['type', 'leaf color', 'age', 'sex']
 
 let tree1: any[] = ['Planetree', 'light-green', 50, 'male']
@@ -18,8 +18,8 @@ let tree2: any[] = ['Red Maple', 'red', 75, 'male']
 let tree3: any[] = ['Hackberry', 'yellow', 100, 'female']
 let tree4: any[] = ['Japanese Zelkova', 'green', 125, 'female']
 let tree5: any[] = ['Red Oak', 'dark-green', 150, 'female']
+*/
 
-/*
 let tree1: any = [
     {
         type: 'Planetree',
@@ -64,4 +64,3 @@ let tree5: any = [
         sex: 'female'
     }
 ]
-*/
