@@ -25,5 +25,6 @@ function initializePokemon(): Pokemon[] {
 for (let i = 0; i < pokemonOfAsh.length; i++) {
     if (pokemonOfAsh[i].effectiveAgainst === wildPokemon.type)
     console.log(pokemonOfAsh[i].name);
+    // save it to string
     else {}
 }
