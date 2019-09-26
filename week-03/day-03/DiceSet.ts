@@ -44,13 +44,13 @@ class DiceSet {
   
 diceSet.reroll();
 
-    for (let i = 0; i <= diceSet.numOfDices-1; i++) {
-        while (diceSet.getCurrent(i) != 6) {
-        diceSet.reroll(i);
-        }        
-    } 
-    console.log(diceSet.getCurrent());
-    console.log(" ------------------");
+for (let i = 0; i <= diceSet.numOfDices-1; i++) {
+    while (diceSet.getCurrent(i) != 6) {
+    diceSet.reroll(i);
+    }        
+} 
+console.log(diceSet.getCurrent());
+console.log(" ------------------");
 
 /*
   console.log(diceSet.getCurrent(5));
