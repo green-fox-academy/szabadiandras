@@ -9,7 +9,7 @@ const ctx = canvas.getContext('2d');
 
 // let cbPosition: number = 0;
 
-let cbSize: number = 20;
+let cbSize: number = 10;
 
 function checkerboard(positionX: number, positionY: number) {
     ctx.fillStyle = 'black';
@@ -37,40 +37,3 @@ for (let i = 0; i < canvas.height/cbSize; i++) {
     incrementor += cbSize*2;
 
 };
-
-/*
-let positionX: number = 0;
-let positionY: number = 0;
-for (let i = 0; i < 10; i++) {
-    checkerboard(positionX, positionY);
-    positionX += cbSize*2;
-};
-
-let positionX2: number = 50;
-let positionY2: number = 50;
-for (let i = 0; i < 10; i++) {
-    checkerboard(positionX2, positionY2);
-    positionX2 += cbSize*2;
-};
-
-let positionX3: number = 0;
-let positionY3: number = 100;
-for (let i = 0; i < 10; i++) {
-    checkerboard(positionX3, positionY3);
-    positionX3 += cbSize*2;
-};
-
-let positionX4: number = 50;
-let positionY4: number = 150;
-for (let i = 0; i < 10; i++) {
-    checkerboard(positionX4, positionY4);
-    positionX4 += cbSize*2;
-};
-
-let positionX5: number = 0;
-let positionY5: number = 200;
-for (let i = 0; i < 10; i++) {
-    checkerboard(positionX5, positionY5);
-    positionX5 += cbSize*2;
-};
-*/

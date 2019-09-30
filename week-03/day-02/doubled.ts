@@ -17,3 +17,4 @@ function decrypt(filename: string) {
 }
 
 let copy: string = 'duplicated-chars.txt'
+decrypt('duplicated-chars.txt');
