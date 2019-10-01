@@ -1,6 +1,8 @@
 'use strict';
 
-abstract class Animal{
+import { Flyable } from "../flyable/flyable";
+
+export abstract class Animal{
     protected _name: string;
     protected _age: number;
     protected _gender: string;
@@ -26,7 +28,7 @@ abstract class Animal{
     }
 }
 
-class Mammal extends Animal{
+export class Mammal extends Animal{
     public constructor(name: string = 'mammal', age?: number, gender?: string, transport?: string){
     super (name, age, gender, transport);
     }
@@ -40,7 +42,7 @@ class Mammal extends Animal{
     }
 }
 
-class Reptile extends Animal{
+export class Reptile extends Animal{
     public constructor(name: string = 'reptile', age?: number, gender?: string, transport?: string){
     super (name, age, gender, transport);
     }
@@ -55,7 +57,7 @@ class Reptile extends Animal{
 
 }
 
-class Bird extends Animal{
+export class Bird extends Animal implements Flyable{
     public constructor(name: string = 'bird', age?: number, gender?: string, transport?: string){
     super (name, age, gender, transport);
     }
@@ -66,6 +68,18 @@ class Bird extends Animal{
 
     breed(): string{
         return "laying eggs."
+    }
+
+    public land(): void{
+        console.log("The bird is landing.");
+    }
+
+    public fly(): void{
+        console.log("The bird is flying.");
+    }
+
+    public takeOff(): void{
+        console.log("The bird takes off.");
     }
 }
 
@@ -85,3 +99,8 @@ console.log('How do you breed?');
 console.log(`A ${reptile.getName()} is breeding by ${reptile.breed()}`);
 console.log(`A ${mammal.getName()} is breeding by ${mammal.breed()}`);
 console.log(`A ${bird.getName()} is breeding by ${bird.breed()}`);
+
+console.log("\n");
+console.log(`${bird.land()}`);
+console.log(`${bird.fly()}`);
+console.log(`${bird.takeOff()}`);

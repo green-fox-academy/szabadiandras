@@ -10,6 +10,16 @@ export class Plants {
     protected _flowers: Flowers[];
     protected _trees: Trees[];
 
+    // forEach
+    
+    constructor(waterlevel: number, color: string, watering: number) {
+        this._waterlevel = waterlevel;
+        this._color = color;
+        this._watering = watering;
+        this._flowers = [];
+        this._trees = [];
+    }
+
     public addFlower(addFlower: Flowers) {
         this._flowers.push(addFlower);
     }
@@ -18,15 +28,15 @@ export class Plants {
         this._trees.push(addTree);
     }
 
-    protected specificDescription(): string {
+    public specificDescription(): string {
         return "";
     }
 
     public description(): void {
-        console.log("The garden has a " + this._color + ' plant with the water level of ' + this.specificWL() + this.specificDescription());
+        console.log("The garden has " + (Flowers.length + Trees.length) + ' plants with the water level of ' + this.specificWL() + this.specificDescription());
     }
 
-    protected specificWL(): number {
+    public specificWL(): number {
         return;
     }
 
@@ -36,11 +46,4 @@ export class Plants {
 
     // public info()
 
-    constructor(waterlevel: number, color: string, watering: number) {
-        this._waterlevel = waterlevel;
-        this._color = color;
-        this._watering = watering;
-        this._flowers = [];
-        this._trees = [];
-    }
 }
