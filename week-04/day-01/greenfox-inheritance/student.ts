@@ -17,7 +17,7 @@ export class Student extends Person {
     }
 
     constructor(name?: string, age?: number, gender?: string, goal?: string, previousOrganization: string = 'The School of Line') {
-        super (name, age, gender, goal)
+        super (name, age, gender, goal);
         this._previousOrganization = previousOrganization;
         this._skippedDays = 0;
     }
