@@ -11,15 +11,15 @@ export class Person {
         this._goal = goal;
     }
 
-    protected specificIntroduce(): string{
+    protected specificIntroduce(): string {
         return "";
     }
 
-    public introduce(geet?: string): void{
+    public introduce(geet?: string): void {
         console.log("Hi, I'm " + this._name + ", a " + this._age + ' year old ' + this._gender + ' ' + this.specificIntroduce());
     }
 
-    protected specificGoal(): string{
+    protected specificGoal(): string {
         return "Live for the moment!";
     }
 

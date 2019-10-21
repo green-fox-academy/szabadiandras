@@ -4,11 +4,11 @@ export class Student extends Person {
     private _previousOrganization: string;
     private _skippedDays: number;
 
-    public specificGoal(): string{
+    public specificGoal(): string {
         return "Be a junior software developer"
     }
 
-    public specificIntroduce(): string{
+    public specificIntroduce(): string {
         return " from " + this._previousOrganization + " who skipped " + this._skippedDays + " days from the course already.";
     }
 
@@ -17,7 +17,7 @@ export class Student extends Person {
     }
 
     constructor(name?: string, age?: number, gender?: string, goal?: string, previousOrganization: string = 'The School of Line') {
-        super (name, age, gender, goal);
+        super(name, age, gender, goal);
         this._previousOrganization = previousOrganization;
         this._skippedDays = 0;
     }

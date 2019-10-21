@@ -6,7 +6,7 @@ let reversed: string = ".eslaf eb t'ndluow ecnetnes siht ,dehctiws erew eslaf dn
 
 function reversing(index) {
     let reverse: string = "";
-    for (var i = index.length -1; i >= 0; i--) {
+    for (let i = index.length -1; i >= 0; i--) {
         reverse = reverse + index[i];
     }
     return reverse;

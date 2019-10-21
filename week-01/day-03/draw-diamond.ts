@@ -28,8 +28,22 @@ function diamond(actLine){
     lines+="\n"
     diamond(++actLine);
   }else{
-    //console.log(lines)    
+    console.log(lines)    
   }    
- 
 }
+
+function diamond2(actLine){
+  if(actLine < lineCount){    
+    let i: number;
+    for (i=lineCount-1;i <= 0;i--) lines+=space;
+    for (i=actLine*2;i<=0;i--) lines+=star;
+    for (i=lineCount-actLine-1; i < 0; i--) lines+=space;
+    lines+="\n"
+    diamond(++actLine);
+  }else{
+    console.log(lines)    
+  }    
+}
+
 diamond(actLine);
+diamond2(actLine);

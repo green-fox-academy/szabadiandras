@@ -1,3 +1,5 @@
+'use strict';
+
 import { Student } from "./student"
 import { Mentor } from "./mentor"
 
@@ -5,6 +7,12 @@ export class Cohort {
     protected _name: string;
     protected _students: Student[];
     protected _mentors: Mentor[];
+    
+    constructor(name: string) {
+        this._name = name;
+        this._students = [];
+        this._mentors = [];
+    }
 
     public addStudent(addStudent: Student) {
         this._students.push(addStudent);
@@ -18,11 +26,5 @@ export class Cohort {
         studentSize = this._students.length;
         mentorSize = this._mentors.length;
         console.log('Cohort name: ' + this._name + ', number of students: ' + this._students.length + ' number of mentors: ' + this._mentors.length);
-    }
-
-    constructor(name: string) {
-        this._name = name;
-        this._students = [];
-        this._mentors = [];
     }
 }

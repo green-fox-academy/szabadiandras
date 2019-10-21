@@ -10,7 +10,7 @@
 //
 // The pyramid should have as many lines as lineCount is
 
-let lineCount = 4;
+let lineCount = 5;
 let actLine = 0;
 let star = "*";
 let space= " ";

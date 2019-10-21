@@ -15,14 +15,13 @@ export class Flowers extends Plants {
         this._watering += waterIntake * 0,75;
 
         if (this._watering >= 10) {
-            console.log("The water needs watering!");
+            console.log("The flower needs watering!");
         } else {
-            console.log("The water doesn't need watering.")
+            console.log("The flower doesn't need watering.")
         }
     }
     
     public specificWL(): any {
         console.log("The water level is: " + this.specificWL());
     }
-
 }
