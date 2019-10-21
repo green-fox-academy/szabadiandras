@@ -19,6 +19,7 @@
   background: #FFD62A;
   flex-grow: 2;
   order: 1;
+  height: 500px;
 }
 
 
@@ -26,4 +27,5 @@
   background: #B02AFF;
   flex-grow: 1;
   order: 0;
+  height: 500px;
 }
