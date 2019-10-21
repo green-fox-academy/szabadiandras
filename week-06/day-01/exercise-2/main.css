@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  height: 800px;
+  align-items: center;
+  justify-content: center;
+}
+
+.item {
+  position: absolute;
+}
+
+.yellow {
+  background: #FFD62A;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.purple {
+  background: #B02AFF;
+  height: 200px;
+  width: 200px;
+  z-index: 1;
+}
