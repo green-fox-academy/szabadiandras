@@ -1,0 +1,67 @@
+SELECT title
+FROM movie
+LEFT JOIN rating
+ON movie.mID = rating.mID
+WHERE stars IS NULL;
+
+---
+https://lagunita.stanford.edu/courses/DB/SQL/SelfPaced/courseware/ch-sql/seq-exercise-sql_movie_query_extra/
+---
+
+
+Q1
+
+SELECT DISTINCT name
+FROM reviewer
+LEFT JOIN rating ON rating.rID = reviewer.rID
+LEFT JOIN movie ON movie.mID = rating.mID
+WHERE title = 'Gone with the Wind'
+
+Q2
+
+SELECT DISTINCT name, title, stars
+FROM reviewer
+LEFT JOIN rating ON rating.rID = reviewer.rID
+LEFT JOIN movie ON movie.mID = rating.mID
+WHERE name = director;
+
+---
+https://lagunita.stanford.edu/courses/DB/SQL/SelfPaced/courseware/ch-sql/seq-exercise-sql_movie_query_core/
+---
+
+Q1
+
+SELECT title FROM movie WHERE director LIKE 'Steven Spielberg'
+
+Q2
+
+SELECT DISTINCT year 
+FROM movie 
+JOIN rating
+ON movie.mID = rating.mID
+WHERE stars >= 4 
+ORDER BY year ASC
+
+Q3
+
+SELECT title
+FROM movie
+LEFT JOIN rating
+ON movie.mID = rating.mID
+WHERE stars IS NULL;
+
+Q4
+
+SELECT name
+FROM reviewer
+LEFT JOIN rating
+ON reviewer.rID = rating.rID
+WHERE ratingDate IS NULL;
+
+Q5
+
+SELECT name, title, stars, ratingDate
+FROM reviewer
+LEFT JOIN rating ON rating.rID = reviewer.rID
+LEFT JOIN movie ON movie.mID = rating.mID
+ORDER BY name, title, stars ASC;
