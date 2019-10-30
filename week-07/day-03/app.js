@@ -31,8 +31,21 @@ app.get('/doubling', (req, res) => {
 // GREETER
 
 app.get('/greeter', (req, res) => {
-  let title = req.query.input;
-  res.send(title);
+
+  if (req.query.name && req.query.title) {
+    console.log('welcome message displayed');
+    var message = {
+      "welcome_message": "Oh, hi there " + req.query.name + ", my dear " + req.query.title + "!"
+    }
+  } else if (req.query.name == false || req.query.title == false) {
+    console.log('error message displayed');
+    var message = {
+      "error": "Please provide a name and a title!"
+    }
+  }
+
+  res.send(message);
+  
 });
 
 app.listen(PORT, () => {
