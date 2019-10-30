@@ -10,6 +10,15 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+app.get('/doubling', (req, res) => {
+  console.log("'/doubling' requested")
+  
+  let input = req.query.input
+  
+  res.send();
+});
+
+
 app.listen(PORT, () => {
   console.log(`\nServer is running.\nAccess at "localhost:${PORT}"`);
 });
