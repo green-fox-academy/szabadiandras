@@ -32,21 +32,32 @@ app.get('/doubling', (req, res) => {
 
 app.get('/greeter', (req, res) => {
 
+  console.log(req.query.name, req.query.title);
+
   if (req.query.name && req.query.title) {
-    console.log('welcome message displayed');
     var message = {
       "welcome_message": "Oh, hi there " + req.query.name + ", my dear " + req.query.title + "!"
     }
-  } else if (req.query.name == false || req.query.title == false) {
-    console.log('error message displayed');
+  } else if (req.query.name == undefined || req.query.title == undefined) {
     var message = {
       "error": "Please provide a name and a title!"
     }
   }
 
   res.send(message);
-  
 });
+
+// APPENDA
+
+app.get('/appenda/:appendable', (req, res) => {
+  if (req.params.appendable) {
+    var appended = req.params.appendable + 'a'
+    res.send(appended);
+  } else {
+    res.status(404);
+  }
+});
+
 
 app.listen(PORT, () => {
   console.log(`\nServer is running.\nAccess at "localhost:${PORT}"`);
