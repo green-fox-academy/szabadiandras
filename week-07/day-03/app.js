@@ -1,10 +1,12 @@
 const express = require('express');
-const app = express();
-const PORT = 8080;
 const path = require('path');
 
+const app = express();
+const PORT = 8080;
+
+app.use(express.static('assets'));
+
 app.get('/', (req, res) => {
-  // res.send('OK!');
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
