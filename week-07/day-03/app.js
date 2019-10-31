@@ -45,6 +45,7 @@ app.get('/greeter', (req, res) => {
   }
 
   res.send(message);
+  
 });
 
 // APPENDA
@@ -58,6 +59,18 @@ app.get('/appenda/:appendable', (req, res) => {
   }
 });
 
+// DO UNTIL
+
+app.post('/dountil/:action', (req, res) 
+
+  console.log("called");
+  //console.log(req.body); -> it only works with body parser package
+
+  res.status(200);
+  res.send("OK");
+});
+
+// localhost
 
 app.listen(PORT, () => {
   console.log(`\nServer is running.\nAccess at "localhost:${PORT}"`);

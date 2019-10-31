@@ -1,0 +1,13 @@
+Server Side Basics
+https://github.com/green-fox-academy/teaching-materials/blob/master/workshop/http-server-basics/js.md
+
+
+
+SQL
+https://github.com/green-fox-academy/teaching-materials/tree/master/workshop/sql-basics
+
+REST Backend API
+https://github.com/green-fox-academy/teaching-materials/blob/master/workshop/backend-api/javascript.md
+
+Node.js and MySQL
+https://github.com/green-fox-academy/teaching-materials/blob/master/workshop/sql-backend/js.md
