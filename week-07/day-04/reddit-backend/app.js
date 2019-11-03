@@ -33,12 +33,20 @@ app.get('/hello', function (req, res) {
 app.get('/posts', (req, res) => {
   const query = "SELECT * FROM post"
   conn.query(query, (err, posts) => {
+    res.setHeader("Content-type", "application/json");
+    res.status(200);
     res.send(JSON.stringify(posts));
   });
 });
 
 app.post('/posts', function (req, res) {
-  res.send('Post Posts');
+  const add = "INSERT INTO posts SELECT * FROM "
+  const query = "SELECT * FROM post"
+  conn.query(query, (err, posts) => {
+    res.setHeader("Content-type", "application/json");
+    res.status(200);
+    res.send(JSON.stringify(posts));
+  });
 });
 
 app.put('/posts/:id/upvote', function (req, res) {
