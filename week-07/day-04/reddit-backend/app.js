@@ -21,6 +21,8 @@ conn.connect(function (err) {
 
 let app = express();
 
+app.use(express.json())
+
 app.get('/', function (req, res) {
   res.send('Main page');
 });
@@ -40,12 +42,13 @@ app.get('/posts', (req, res) => {
 });
 
 app.post('/posts', function (req, res) {
-  const add = "INSERT INTO posts SELECT * FROM "
-  const query = "SELECT * FROM post"
+  const time = new Date().getTime();
+  const query = `INSERT INTO reddit.post (title, url, timestamp, score) VALUES ('${req.body.title}', 'localhost:8080/posts/${req.body.title}', '${time}', '${req.body.score}')`
   conn.query(query, (err, posts) => {
+    console.log(err)
     res.setHeader("Content-type", "application/json");
     res.status(200);
-    res.send(JSON.stringify(posts));
+    res.send(JSON.stringify(query));
   });
 });
 
@@ -59,7 +62,14 @@ app.put('/posts/:id/downvote', function (req, res) {
 
 //DELETE (optional)
 app.delete('/posts/:id', function (req, res) {
+  const id = ':id'
+  const query = `DELETE FROM reddit.post WHERE (id = ${id})`
   res.send(req.params.id);
+  conn.query(query, (err, posts) => {
+    res.setHeader("Content-type", "application/json");
+    res.status(200);
+    res.send(JSON.stringify(query));
+  });
 });
 
 //PUT (optional)
