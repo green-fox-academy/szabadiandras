@@ -1,5 +1,6 @@
 const mysql = require('mysql');
 const express = require('express');
+const path = require('path');
 const PORT = 8080;
 
 
@@ -24,7 +25,8 @@ let app = express();
 app.use(express.json())
 
 app.get('/', function (req, res) {
-  res.send('Main page');
+  res.sendFile(path.join(__dirname, 'index.html'));
+//  res.send('Main page');
 });
 
 app.get('/hello', function (req, res) {
