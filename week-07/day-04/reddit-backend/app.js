@@ -17,7 +17,7 @@ conn.connect(function (err) {
     console.log(err);
     return;
   }
-  console.log('Connection to database established');
+  console.log('Connection to database established\n');
 });
 
 let app = express();
