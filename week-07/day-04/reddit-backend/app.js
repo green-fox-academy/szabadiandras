@@ -25,8 +25,8 @@ let app = express();
 app.use(express.json())
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'index.html'));
-//  res.send('Main page');
+  res.sendFile(path.join(__dirname, './public/index.html'));
+  console.log('Client request: "Main page".')
 });
 
 app.get('/hello', function (req, res) {
@@ -43,6 +43,20 @@ app.get('/posts', (req, res) => {
     res.setHeader("Content-type", "application/json");
     res.status(200);
     res.send(JSON.stringify(posts));
+    console.log('Client request: "Get all API".')
+  });
+});
+
+
+//GET POST DATABASE
+
+app.get('/posts/db', (req, res) => {
+  const query = "SELECT * FROM post"
+  conn.query(query, (err, posts) => {
+    res.setHeader("Content-type", "application/json");
+    res.status(200);
+    res.send(JSON.stringify(posts));
+    console.log('Client request: "Get Post database".')
   });
 });
 
@@ -71,10 +85,11 @@ app.post('/posts', function (req, res) {
 app.put('/posts/:id/upvote', function (req, res) {
   const query = `UPDATE reddit.post SET score = score + 1 WHERE (id = ${req.params.id})`
   conn.query(query, (err, posts) => {
-    console.log(err)
+    console.log('Checking for errors: ' + err)
     res.setHeader("Content-type", "application/json");
     res.status(200);
     res.send(JSON.stringify(query) + `\nThe post "${req.body.title}" has been upvoted.`);
+    console.log(`Client request: "Upvote post called '${req.body.title}' in database".`)
   });
 });
 
@@ -84,10 +99,11 @@ app.put('/posts/:id/upvote', function (req, res) {
 app.put('/posts/:id/downvote', function (req, res) {
   const query = `UPDATE reddit.post SET score = score - 1 WHERE (id = ${req.params.id})`
   conn.query(query, (err, posts) => {
-    console.log(err)
+    console.log('Checking for errors: ' + err)
     res.setHeader("Content-type", "application/json");
     res.status(200);
     res.send(JSON.stringify(query) + `\nThe post "${req.body.title}" has been downvoted. Current score is ${req.body.score}`);
+    console.log(`Client request: "Downvote post called '${req.body.title}' in database".`)
   });
 });
 
