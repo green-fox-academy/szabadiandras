@@ -1,7 +1,8 @@
 'use strict';
 
-let button = document.querySelector('nav');
+let nav = document.querySelector('nav');
 
-button.addEventListener('click', function(event){
-  console.log('clicked');
+nav.addEventListener('click', function(event){
+  console.log('Clicked');
+  console.log(event);
 });
