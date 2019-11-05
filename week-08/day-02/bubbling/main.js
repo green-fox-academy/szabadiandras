@@ -3,11 +3,12 @@
 const nav = document.querySelector('nav');
 const inspector = document.querySelector('.img-inspector');
 let zoom = 200;
+let margin = 0;
 
 nav.addEventListener('click', function (event) {
   
   if (event.target.attributes[1].value === 'up') {
-    inspector.style.backgroundSize = "300%"
+    inspector.style.margin = 100
     console.log('Up');
   
   } else if (event.target.attributes[1].value === 'down') {
