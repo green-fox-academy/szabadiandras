@@ -3,13 +3,19 @@
 let button = document.querySelector('button')
 
 //First solution
-button.addEventListener('click', function(){
+button.addEventListener('click', function () {
   console.log(Date());
   button.disabled = true;
 });
 
 //Second solution
-button.addEventListener('click', function(){
-  console.log(Date());
-  button.disabled = true;
+/*
+let counter = document.querySelectorAll('button');
+button.addEventListener('click', function () {
+
+  for (let i = 0; i <= counter.length-1; i++) {
+    console.log(Date());
+  }
+  counter = 0;
 });
+*/
