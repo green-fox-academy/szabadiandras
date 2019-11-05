@@ -1,11 +1,11 @@
-'use strict';
+'use strict'
 
-const button = document.querySelector('#click');
-const listCounter = () => {
-  let li = document.querySelector('li');
-  for (let i = 0; i < li; i++) {
-    let result = 
-    
-  }
-};
-button.addEventListener('click', listCounter);
+let button = document.querySelector('button')
+
+let list = document.querySelectorAll('li')
+
+let result = document.querySelector('.result')
+
+button.addEventListener('click', function(){
+  result.innerHTML = list.length;
+});
