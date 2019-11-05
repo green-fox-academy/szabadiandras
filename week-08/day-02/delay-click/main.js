@@ -7,18 +7,13 @@
 const button = document.querySelector('button');
 const text = document.querySelector('p')
 
+let elapsed = 0;
+
 let time = setInterval(() => {
-  ++elapsed;
-}, 1000);
-
-button.addEventListener('click', function (event) {
-  text.innerHTML = time + ' seconds elapsed.'
-  console.log('Button pressed. Elapsed time since: ' + (event.timeStamp));
-  clearInterval(time);
+  button.addEventListener('click', function (event) {
+    text.innerHTML = elapsed + ' seconds elapsed.'
+    clearInterval(elapsed, time);
+    console.log('Button pressed. Elapsed time since: ' + (elapsed));
+    ++elapsed;
+  }, 1000);
 });
-
-/*
-function myFunction() {
-  setTimeout(function () { alert("Hello"); }, 3000);
-}
-*/
