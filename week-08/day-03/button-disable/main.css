@@ -46,7 +46,3 @@ button:hover {
   -moz-box-shadow: 0px 17px 24px -15px rgb(129, 129, 129);
   box-shadow: 0px 17px 24px -15px rgb(129, 129, 129);
 }
-
-#catButton {
-  background-image: linear-gradient(to left bottom, #003585, #6d278b, #ae0078, #da004f, #eb1212);
-}

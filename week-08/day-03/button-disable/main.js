@@ -1,30 +1,32 @@
 'use strict';
 
-const userInput = document.getElementsByTagName('input')
-const signupButton = document.getElementsByTagName('signupButton');
+const userInput = document.getElementsByTagName('input');
+const signupButton = document.getElementById('signupButton');
+const catButton = document.getElementById('catButton');
 
 document.addEventListener('click', function (event) {
   if (userInput['cat'].checked == true || userInput['dog'].checked == true) {
-    document.getElementById('signupButton').removeAttribute("disabled");
-    console.log('Sign up button enabled.')
+    signupButton.removeAttribute("disabled");
+    console.log('Sign up button enabled.');
   } else if (userInput['viktor'].checked == true) {
-    document.getElementById('signupButton').removeAttribute("disabled");
-    console.log('Sign up button temporarily enabled.')
+    signupButton.removeAttribute("disabled");
+    console.log('Sign up button temporarily enabled.');
   } else {
-    document.getElementById('signupButton').setAttribute("disabled", "");
-    console.log('Sign up button disabled.')
+    signupButton.setAttribute("disabled", "");
+    console.log('Sign up button disabled.');
   }
+});
 
-});  
-  
 document.addEventListener('click', function (event) {
   if (userInput['yes'].checked == true) {
-    document.getElementById('catButton').removeAttribute("disabled");
-    document.getElementById('catButton').style.color = "white";
-    console.log('Cat button enabled.')
+    catButton.removeAttribute("disabled");
+    catButton.style.color = "white";
+    catButton.style.backgroundImage = "linear-gradient(to left bottom, #003585, #6d278b, #ae0078, #da004f, #eb1212)";
+    console.log('Cat button enabled.');
   } else {
-    document.getElementById('catButton').setAttribute("disabled", "");
-    document.getElementById('catButton').style.color = "grey";
-    console.log('Cat button disabled.')
+    catButton.setAttribute("disabled", "");
+    catButton.style.color = "grey";
+    catButton.style.backgroundImage = "none";
+    console.log('Cat button disabled.');
   }
 });
