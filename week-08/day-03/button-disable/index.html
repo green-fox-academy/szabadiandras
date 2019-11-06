@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,30 @@
   <title>Document</title>
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
+
 <body>
-  
-  
+  <div class="survey">
+    <fieldset>
+      <legend>What is your favourite pet?<abbr title="This field is mandatory" aria-label="required"></abbr></legend>
+      <input type="radio" required name="driver" id="r1" value="Dog"><label for="r1">Dog</label>
+      <input type="radio" required name="driver" id="r2" value="Cat"><label for="r2">Cat</label>
+      <input type="radio" required name="driver" id="r2" value="Viktor"><label for="r3">Viktor the goldfish</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Do you want to sign up for cat facts?<abbr title="This field is mandatory" aria-label="required"></abbr>
+      </legend>
+      <input type="radio" required name="driver" id="r2" value="Yes"><label for="r2">Yes</label>
+      <input type="radio" required name="driver" id="r2" value="No"><label for="r3">No</label>
+    </fieldset>
+
+    <div class="btns">
+      <button>I love cats</button>
+      <button type="submit">Login</button>
+    </div>
+
+  </div>
 
 </body>
+
 </html>
