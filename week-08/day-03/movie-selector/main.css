@@ -3,17 +3,35 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  font-family: 'Titillium Web', sans-serif;
-  font-weight: bold;
+  font-family: sans-serif;
 }
 
 #selector {
-  z-index: 1;
+  margin: 100px;
   background-color: pink;
-  width: 800px;
-  height: 400px;
+  width: 650px;
+  height: 300px;
   border-radius: 25px;
   -webkit-box-shadow: 45px 45px 0px -15px rgba(174, 148, 212, 1);
   -moz-box-shadow: 45px 45px 0px -15px rgba(174, 148, 212, 1);
   box-shadow: 45px 45px 0px -15px rgba(174, 148, 212, 1);
+}
+
+.content {
+  margin: 25px 50px 50px 75px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 25pt;
+  padding: 50px 0px 0px 0px;
+}
+
+input {
+  padding: 20px 20px;
+  margin-bottom: 20px;
+  border-radius: 7px;
+  border: 0px;
+  font: bold;
+  font-weight: 15pt;
 }

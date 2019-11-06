@@ -10,11 +10,33 @@
 </head>
 
 <body>
-
   <div id="selector">
-    
-  </div>
+    <div class="content">
+      <h1>Movie Selector</h1>
 
+      <input type="text" list="genre" placeholder="Select a genre">
+      <datalist id="genre">
+        <option>Sci-fi</option>
+        <option>Drama</option>
+        <option>Comedy</option>
+      </datalist>
+
+      <input type="text" list="title" placeholder="Select a movie">
+      <datalist id="title">
+        <option class="drama">Moon</option>
+        <option class="">2001: A Space Odyssey</option>
+        <option class="scifi">Contact</option>
+        <option class="drama">Darkest Hour</option>
+        <option class="drama">There Will Be Blood</option>
+        <option class="comedy">American Beauty</option>
+        <option class="comedy">Airplane!</option>
+        <option class="comdey">Deadpool</option>
+        <option class="scifi">Wayne's World</option>
+      </datalist>
+
+      <div class="selected">Selected movie will show here.</div>
+    </div>
+  </div>
 </body>
 
 </html>
