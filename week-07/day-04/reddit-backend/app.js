@@ -3,7 +3,6 @@ const express = require('express');
 const path = require('path');
 const PORT = 8080;
 
-
 let conn = mysql.createConnection({
   host: '127.0.0.1',
   user: 'root',
