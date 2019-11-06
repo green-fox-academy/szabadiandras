@@ -1,6 +1,5 @@
 const express = require('express');
 const path = require('path');
-
 const app = express();
 const PORT = 8080;
 
@@ -45,7 +44,7 @@ app.get('/greeter', (req, res) => {
   }
 
   res.send(message);
-  
+
 });
 
 // APPENDA
@@ -61,6 +60,7 @@ app.get('/appenda/:appendable', (req, res) => {
 
 // DO UNTIL
 
+/*
 app.post('/dountil/:action', (req, res) 
 
   console.log("called");
@@ -69,6 +69,7 @@ app.post('/dountil/:action', (req, res)
   res.status(200);
   res.send("OK");
 });
+*/
 
 // localhost
 

@@ -43,7 +43,19 @@ app.get('/posts', (req, res) => {
     res.setHeader("Content-type", "application/json");
     res.status(200);
     res.send(JSON.stringify(posts));
-    console.log('Client request: "Get all API".')
+    console.log('Client request: "Get API".')
+  });
+});
+
+
+// GET USERS
+
+app.get('/owner', (req, res) => {
+  const query = "SELECT * FROM reddit.owner"
+  conn.query(query, (err, owner) => {
+    res.status(200);
+    res.send(JSON.stringify(owner));
+    console.log('Client request: "Get Owner database".')
   });
 });
 
@@ -74,7 +86,7 @@ app.post('/posts', function (req, res) {
     conn.query(query, (err, post) => {
       res.setHeader("Content-type", "application/json");
       res.status(200);
-      res.send(JSON.stringify(post) + `\n${req.body.title} is added to posts.`);
+      res.send(JSON.stringify(post) + `\n"${req.body.title}" is added to posts.`);
     })
   });
 });
