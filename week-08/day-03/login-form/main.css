@@ -1,6 +1,6 @@
 body {
   display: flex;
-  align-items: middle;
+  align-items: center;
   justify-content: center;
   font-family: 'Titillium Web', sans-serif;
   background-color: lightgrey;
@@ -9,17 +9,26 @@ body {
 form {
   display: inline-block;
   background-color: white;
-  padding: 100px;
   width: 300px;
+  height: 300px;
   border-radius: 5px;
-  margin: 100px;
+  margin: 75px;
+  padding: 0px 100px 150px 100px;
 }
 
 input {
   padding: 10px;
   width: 100%;
 }
-
+/*
+#password {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('./assets/login_eye.png');
+  background-size: 10%;
+}
+*/
 h2 {
   color: #42403a;
   letter-spacing: 1.5pt;
@@ -32,6 +41,7 @@ button {
   border-radius: 25px;
   color: white;
   font-size: 11pt;
+  font-weight: bold;
   margin: 20px 20px 20px 0px;
 }
 
