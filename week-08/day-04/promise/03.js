@@ -2,12 +2,12 @@
 
 let promise = new Promise(function (fulfill, rejected) {
   setTimeout(() => {
-    rejected('REJECTED!');
+    rejected(new Error('REJECTED!'));
   }, 300);
 });
 
 function onReject(error) {
-  console.log(error.messsage);
+  console.log(error.message);
 };
 
-promise.then(null, rejected);
+promise.then(null, onReject);
