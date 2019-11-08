@@ -1,0 +1,41 @@
+body {
+  display: flex;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  align-items: center;
+  justify-content: center;
+}
+
+#board {
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  grid-area: main;
+  background: rgb(255, 230, 0);
+}
+
+#fields {
+  justify-self: center;
+  align-self: center;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  width: 800px;
+  height: 600px;
+  grid-template-areas:
+  "main main main main main main main"
+  "main main main main main main main"
+  "main main main main main main main"
+  "main main main main main main main"
+  "main main main main main main main"
+  "main main main main main main main"
+}
+
+.greenfield {
+  grid-column: 2 / 5;
+  grid-row: 2 / 4;
+  background-color: green;
+}

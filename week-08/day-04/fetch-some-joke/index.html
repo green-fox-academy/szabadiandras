@@ -9,20 +9,47 @@
 </head>
 
 <body>
+
+  <button>Gimme a joke</button>
   <div></div>
+
+  <!-- STYLE -->
+
   <style>
     body {
       text-align: center;
     }
 
     button {
-      border-radius: 5px;
-      padding: 20px;
+      border-radius: 10px;
+      padding: 10px;
       width: 200px;
-      font-size: 20pt;
+      font-size: 15pt;
     }
   </style>
-  <button>Start</button>
+
+  <!-- SCRIPT -->
+
+  <script>
+
+    let btn = document.querySelector('button');
+    let div = document.querySelector('div');
+
+    btn.addEventListener('click', function (event) {
+      fetch('http://api.icndb.com/jokes/random', {
+        method: "POST"
+      }).then((response) => {
+        console.log(response.json());
+        let p = document.createElement('p');
+        p.innerHTML = 'The joke comes here';
+        document.body.appendChild(p);
+      });
+    });
+
+    // resonpse.json(); <--- implement this in second '.then'
+
+  </script>
+
 </body>
 
 </html>

@@ -11,4 +11,4 @@ promise.catch(function(error) {
 
 Promise.resolve("PROMISE.RESOLVE");
 
-Promise.reject(new Error("PROMIE.REJECT"));
+Promise.reject(new Error("PROMISE.REJECT"));
