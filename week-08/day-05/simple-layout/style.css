@@ -38,7 +38,7 @@ header {
 aside {
   grid-column: span 1;
   height: 1200px;
-  background: rgb(0, 189, 0);
+  background: green;
 }
 
 main {
