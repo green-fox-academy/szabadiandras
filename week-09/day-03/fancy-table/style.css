@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+body {
+  display: flex;
+  justify-content: center;
+  background: cornflowerblue;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+table {
+  margin: 100px;
+  box-shadow: 5px 5px 20px rgb(61, 61, 61);
+  border-collapse: collapse;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+td, th {
+  border: 2px solid grey;
+  width: 300px;
+  font-size: 30px;
+  padding: 20px;
+}
+
+thead {
+  background-color: rgb(41, 41, 41);
+  color: white;
+}
+
+tbody tr:nth-of-type(odd) {
+  background-color: lightgrey;
+}
+
+tbody tr:nth-of-type(even) {
+  background-color: white;
+}
+
+tbody>tr td:nth-child(2):before {
+  content: "\0024";
+}
