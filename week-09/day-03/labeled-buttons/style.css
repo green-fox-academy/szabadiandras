@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #313841;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+table {
+  padding: 300px;
+  text-align: center;
+  border-collapse: collapse;
+  border: none;
+}
+
+button {
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  margin: 25px 0px 25px 25px;
+  border-width: 0px;
+  background-color: #1C242B;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+svg {
+  height: 50px;
+  width: 50px;
+}
+
+button:focus {
+  outline: 0px;
+}
+
+button:hover {
+  filter: brightness(120%);
+  transition: 0.25s;
+}
+
+button:active {
+  filter: brightness(80%);
+  transition: 0.25s;
+}
+
+p {
+  border: none;
+  height: 50px;
+  padding: 25px;
+  font-size: 25pt;
+}
+
+#del {
+  display: block;
+}
+
+#con {
+  display: block;
+}
+
+#delete {
+  width: 0px;
+  text-indent: -400px;
+  overflow: hidden;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+#confirm {
+  width: 0px;
+  text-indent: -400px;
+  overflow: hidden;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+#delete:hover {
+  background: #F34541;
+  text-indent: 0;
+  width: 250px;
+  transition: all 0.5s ease-in-out;
+  display: block;
+}
+
+#confirm:hover {
+  background: #38BA7D;
+  text-indent: 0;
+  width: 250px;
+  transition: all 0.5s ease-in-out;
+  display: block;
+}
