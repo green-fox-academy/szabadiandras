@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
 body {
-  display: flex;
-  justify-content: center;
   background-color: #313841;
   font-family: 'Titillium Web', sans-serif;
+  padding-top: 100px;
+  padding-left: 700px;
 }
 
 table {
-  padding: 300px;
   text-align: center;
   border-collapse: collapse;
   border: none;
@@ -31,6 +30,8 @@ svg {
 
 button:focus {
   outline: 0px;
+  filter: brightness(120%);
+  box-shadow: inset 0px -5px 0px 0px rgba(0, 0, 0, 0.5);
 }
 
 button:hover {
@@ -44,7 +45,6 @@ button:active {
 }
 
 p {
-  border: none;
   height: 50px;
   padding: 25px;
   font-size: 25pt;
@@ -62,7 +62,7 @@ p {
   width: 0px;
   text-indent: -400px;
   overflow: hidden;
-  display: inline-block;
+  display: none;
   border-radius: 5px;
 }
 
@@ -70,11 +70,11 @@ p {
   width: 0px;
   text-indent: -400px;
   overflow: hidden;
-  display: inline-block;
+  display: none;
   border-radius: 5px;
 }
 
-#delete:hover {
+#deletehover:hover + #delete {
   background: #F34541;
   text-indent: 0;
   width: 250px;
@@ -82,7 +82,7 @@ p {
   display: block;
 }
 
-#confirm:hover {
+#confirmhover:hover+#confirm {
   background: #38BA7D;
   text-indent: 0;
   width: 250px;
