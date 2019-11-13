@@ -1,0 +1,66 @@
+body {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(47, 48, 96);
+}
+
+table {
+  padding: 100px;
+}
+
+button {
+  font-size: 17pt;
+  width: 210px;
+  height: 90px;
+  margin: 35px;
+  border-radius: 10px;
+  border-bottom: -5px solid black;
+  border-color: transparent;
+  color: white;
+  border: 0px;
+  
+  box-shadow: inset 0px -5px 0px 0px rgba(0, 0, 0, 0.5), inset 0px 3px 0px 0px rgba(232,232,232,0.25);
+}
+
+button:focus {
+  outline: 0;
+}
+
+button:hover {
+  filter: brightness(110%);
+  transition: 0.25s;
+}
+
+button:active {
+  filter: brightness(90%);
+  transition: 0.25s;
+}
+
+p {
+  opacity: 0.7;
+}
+
+.blue {
+  background: linear-gradient(0deg, rgba(66, 95, 159, 1) 0%, rgba(79, 114, 193, 1) 100%);
+}
+
+.green {
+  background: linear-gradient(0deg, rgba(26, 169, 86, 1) 0%, rgba(42, 224, 118, 1) 100%);
+}
+
+.red {
+  background: linear-gradient(0deg, rgba(211, 66, 49, 1) 0%, rgba(255, 103, 85, 1) 100%);
+}
+
+.light {
+  background: linear-gradient(0deg, rgba(1, 175, 238, 1) 0%, rgba(42, 197, 255, 1) 100%);
+}
+
+.black {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(28, 28, 28, 1) 100%);
+}
+
+.white {
+  background: linear-gradient(0deg, rgba(227, 227, 227, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  color: rgb(97, 97, 97);
+}
