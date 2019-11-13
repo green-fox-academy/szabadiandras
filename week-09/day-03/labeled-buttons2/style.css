@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+body {
+  display: flex;
+  background-color: #313841;
+  font-family: 'Titillium Web', sans-serif;
+  padding-top: 100px;
+  padding-left: 700px;
+}
+
+.table {
+  text-align: center;
+  border-collapse: collapse;
+  border: none;
+}
+
+svg {
+  height: 50px;
+  width: 50px;
+}
+
+button {
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  margin: 25px 0px 25px 25px;
+  border-width: 0px;
+  background-color: #1C242B;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: 0px;
+  filter: brightness(120%);
+  box-shadow: inset 0px -7.5px 0px 0px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+  filter: brightness(120%);
+  transition: 0.25s;
+}
+
+button:active {
+  filter: brightness(80%);
+  transition: 0.25s;
+}
+
+p {
+  height: 50px;
+  padding: 25px;
+  font-size: 25pt;
+}
+
+#delete {
+  width: 0px;
+  text-indent: -400px;
+  overflow: hidden;
+  display: none;
+  border-radius: 5px;
+}
+
+#confirm {
+  width: 0px;
+  text-indent: -400px;
+  overflow: hidden;
+  display: none;
+  border-radius: 5px;
+}
+
+#deletehover:hover + #delete {
+  background: #F34541;
+  text-indent: 0;
+  width: 250px;
+  transition: all 0.5s ease-in-out;
+  display: block;
+}
+
+#confirmhover:hover + #confirm {
+  background: #38BA7D;
+  text-indent: 0;
+  width: 250px;
+  transition: all 0.5s ease-in-out;
+  display: block;
+}
+
+/***/
+
+#sample {
+  height: 20px;
+  width: 20px;
+  background-color: blue;
+  padding: 20px;
+}
+
+#sample2{
+  height: 20px;
+  width: 20px;
+  background-color: red;
+  padding: 20px;
+}
+
+#sample:hover + #sample2 {
+  background-color: yellow;
+  background: #38BA7D;
+  text-indent: 0;
+  width: 250px;
+  transition: all 0.5s ease-in-out;
+  display: block;
+}
+
+#deletehover:hover + #sample2 {
+  background: #F34541;
+  text-indent: 0;
+  width: 250px;
+  transition: all 0.5s ease-in-out;
+  display: block;
+}
+
+
+/***/

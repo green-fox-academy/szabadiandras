@@ -20,7 +20,7 @@ app.get("/rocket", (req, res) => {
     });
   } else {
     res.status(404);
-    res.json({ error: "Invalid input" });
+    res.json({ Error: "Invalid input, please retry" });
   }
 });
 
@@ -43,4 +43,4 @@ app.get("/rocket/fill", (req, res) => {
   }
 });
 
-module.exports = app;
+module.exports = a0pp;
