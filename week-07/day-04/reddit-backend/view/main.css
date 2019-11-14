@@ -41,8 +41,12 @@ header>div {
 }
 
 .navigation {
+  padding: 50px;
+  display: flex;
+  align-items: center; /* !!! */
   flex-grow: 2;
   background-color: whitesmoke;
+  flex-direction: column;
 }
 
 .arena {
