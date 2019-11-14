@@ -56,6 +56,7 @@ header {
   display: flex;
   flex-flow: column;
   background-color: whitesmoke;
+  min-width: 800px;
 }
 
 .arena>h1 {
@@ -159,7 +160,7 @@ h1:hover {
   filter: brightness(80%);
 }
 
-.arenafooter > a:visited {
+.arenafooter>a:visited {
   color: grey;
   text-decoration: none;
 }
@@ -173,6 +174,7 @@ h1:hover {
   font-size: 12.5pt;
   font-weight: bold;
   border: none;
+  width: 100%;
 }
 
 .submit:focus {
@@ -189,11 +191,11 @@ h1:hover {
   transition: 0.25s;
 }
 
-.submit > a {
+.submit>a {
   text-decoration: none
 }
 
-.submit > a:visited {
+.submit>a:visited {
   text-decoration: none;
   color: white;
 }
@@ -202,7 +204,7 @@ h1:hover {
   background-color: rgb(226, 59, 59);
 }
 
-.cancel > a {
+.cancel>a {
   color: white;
 }
 
@@ -226,4 +228,31 @@ input {
 .comments:visited {
   color: #4AA3DF;
   text-decoration: none;
+}
+
+#posting {
+  display: flex;
+  justify-content: center;
+}
+
+.subtitle {
+  display: flex;
+  color: white;
+  font-size: 17pt;
+  letter-spacing: 8pt;
+  font-weight: lighter;
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+input {
+  height: 100px;
+  width: 95%;
 }

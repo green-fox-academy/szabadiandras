@@ -115,7 +115,9 @@ app.put("/posts/:id/downvote", function(req, res) {
       res.setHeader("Content-type", "application/json");
       res.status(200);
       res.send(JSON.stringify(post));
-      console.log(`Client request: "Upvote post called '${req.body.title}' in database".`);
+      console.log(
+        `Client request: "Upvote post called '${req.body.title}' in database".`
+      );
     });
   });
 });
@@ -131,7 +133,9 @@ app.delete("/posts/:id", function(req, res) {
       res.setHeader("Content-type", "application/json");
       res.status(200);
       res.send(JSON.stringify(post));
-      console.log(`Client request: "Delete post with title '${req.body.title}' from database".`);
+      console.log(
+        `Client request: "Delete post with title '${req.body.title}' from database".`
+      );
     });
   });
 });
