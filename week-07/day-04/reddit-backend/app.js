@@ -30,7 +30,7 @@ app.get("/", function(req, res) {
 
 app.get("/hello", function(req, res) {
   console.log("hello world");
-  res.send("Hello");
+  res.send("Hello World");
 });
 
 //GET POSTS
@@ -73,7 +73,7 @@ app.get("/posts/db", (req, res) => {
 app.post("/posts", function(req, res) {
   const dateObj = new Date();
   const date = `${dateObj.getFullYear()}-${dateObj.getMonth()}-${dateObj.getDate()} ${dateObj.getHours()}:${dateObj.getMinutes()}:${dateObj.getSeconds()}`;
-  const query = `INSERT INTO reddit.post (title, url, timestamp, score) VALUES ('${req.body.title}', 'localhost:8080/posts/${req.body.title}', '${date}', '0')`;
+  const query = `INSERT INTO reddit.post (title, url, timestamp, score) VALUES ('${req.body.title}', '${req.body.url}', '${date}', '0')`;
   conn.query(query, (err, post) => {
     console.log(err);
     console.log(post);
@@ -81,9 +81,7 @@ app.post("/posts", function(req, res) {
     conn.query(query, (err, post) => {
       res.setHeader("Content-type", "application/json");
       res.status(200);
-      res.send(
-        JSON.stringify(post) + `\n"${req.body.title}" is added to posts.`
-      );
+      res.send(JSON.stringify(post));
     });
   });
 });
@@ -92,16 +90,17 @@ app.post("/posts", function(req, res) {
 
 app.put("/posts/:id/upvote", function(req, res) {
   const query = `UPDATE reddit.post SET score = score + 1 WHERE (id = ${req.params.id})`;
-  conn.query(query, (err, posts) => {
+  conn.query(query, (err, post) => {
     console.log("Checking for errors: " + err);
-    res.setHeader("Content-type", "application/json");
-    res.status(200);
-    res.send(
-      JSON.stringify(query) + `\nThe post "${req.body.title}" has been upvoted.`
-    );
-    console.log(
-      `Client request: "Upvote post called '${req.body.title}' in database".`
-    );
+    const query = `SELECT * FROM post WHERE id=${req.params.id}`;
+    conn.query(query, (err, post) => {
+      res.setHeader("Content-type", "application/json");
+      res.status(200);
+      res.send(JSON.stringify(post));
+      console.log(
+        `Client request: "Upvote post called '${req.body.title}' in database".`
+      );
+    });
   });
 });
 
@@ -109,17 +108,15 @@ app.put("/posts/:id/upvote", function(req, res) {
 
 app.put("/posts/:id/downvote", function(req, res) {
   const query = `UPDATE reddit.post SET score = score - 1 WHERE (id = ${req.params.id})`;
-  conn.query(query, (err, posts) => {
+  conn.query(query, (err, post) => {
     console.log("Checking for errors: " + err);
-    res.setHeader("Content-type", "application/json");
-    res.status(200);
-    res.send(
-      JSON.stringify(query) +
-        `\nThe post "${req.body.title}" has been downvoted. Current score is ${req.body.score}`
-    );
-    console.log(
-      `Client request: "Downvote post called '${req.body.title}' in database".`
-    );
+    const query = `SELECT * FROM post WHERE id=${req.params.id}`;
+    conn.query(query, (err, post) => {
+      res.setHeader("Content-type", "application/json");
+      res.status(200);
+      res.send(JSON.stringify(post));
+      console.log(`Client request: "Upvote post called '${req.body.title}' in database".`);
+    });
   });
 });
 
@@ -127,10 +124,15 @@ app.put("/posts/:id/downvote", function(req, res) {
 
 app.delete("/posts/:id", function(req, res) {
   const query = `DELETE FROM reddit.post WHERE id = ${req.params.id}`;
-  conn.query(query, (err, posts) => {
-    res.setHeader("Content-type", "application/json");
-    res.status(200);
-    res.send(JSON.stringify(query) + "\n" + req.params.id + " is deleted.");
+  conn.query(query, (err, post) => {
+    console.log("Checking for errors: " + err);
+    const query = `SELECT * FROM post WHERE id=${req.params.id}`;
+    conn.query(query, (err, post) => {
+      res.setHeader("Content-type", "application/json");
+      res.status(200);
+      res.send(JSON.stringify(post));
+      console.log(`Client request: "Delete post with title '${req.body.title}' from database".`);
+    });
   });
 });
 
