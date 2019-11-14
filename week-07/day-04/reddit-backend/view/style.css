@@ -18,6 +18,12 @@ header {
   height: 100px;
   width: 100px;
   padding: 0px 100px;
+  transition: 0.3s;
+}
+
+.logo img:hover{
+  transform: rotate(10deg);
+  transition: 0.15s;
 }
 
 .title {
@@ -126,10 +132,11 @@ a:active {
 }
 
 footer {
-  grid-column: span 4;
-  align-items: center;
-  /* !!! */
-  padding: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: rgb(192, 192, 192);
+  margin-top: 200px;
 }
 
 footer>a {
@@ -201,7 +208,7 @@ h1:hover {
 }
 
 .cancel {
-  background-color: rgb(226, 59, 59);
+  background-color: grey;
 }
 
 .cancel>a {
@@ -213,21 +220,16 @@ h1:hover {
   text-decoration: none;
 }
 
+.cancel:hover {
+  background-color: rgb(226, 59, 59);
+  transition: 0.25s;
+}
+
 input {
   padding: 20px;
   border-radius: 5px;
   margin: 10px;
   border: none;
-}
-
-.comments {
-  color: #4AA3DF;
-  text-decoration: none;
-}
-
-.comments:visited {
-  color: #4AA3DF;
-  text-decoration: none;
 }
 
 #posting {
@@ -241,7 +243,8 @@ input {
   font-size: 17pt;
   letter-spacing: 8pt;
   font-weight: lighter;
-  padding: 20px;
+  padding-top: 175px;
+  position: absolute;
 }
 
 form {
@@ -250,9 +253,25 @@ form {
   justify-content: center;
   align-content: center;
   align-items: center;
+  margin-bottom: 0px;
 }
 
 input {
   height: 100px;
   width: 95%;
+}
+
+form>p {
+  align-self: left;
+  font-weight: bold;
+  font-size: 12pt;
+  color: grey;
+}
+
+.comments {
+  color: #4AA3DF;
+}
+
+.comments:visited {
+  color: #4AA3DF;
 }
