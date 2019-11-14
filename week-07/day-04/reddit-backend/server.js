@@ -21,7 +21,7 @@ conn.connect(function(err) {
 
 let app = express();
 app.use(express.json());
-app.use(express.static('view'));
+app.use(express.static("view"));
 
 app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "./view/index.html"));

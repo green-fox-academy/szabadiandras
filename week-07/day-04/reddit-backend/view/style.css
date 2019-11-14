@@ -52,7 +52,7 @@ header {
   flex-direction: column;
 }
 
-.navigation>a>img {
+.navigation>div>img {
   width: 20px;
   height: 20px;
 }
@@ -123,6 +123,17 @@ main {
 
 a:hover {
   filter: brightness(80%);
+  transition: 0.25s;
+}
+
+div>img:hover {
+  filter: brightness(80%);
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+div>img:active {
+  filter: brightness(50%);
   transition: 0.25s;
 }
 
@@ -275,3 +286,5 @@ form>p {
 .comments:visited {
   color: #4AA3DF;
 }
+
+/*@media screen*/
