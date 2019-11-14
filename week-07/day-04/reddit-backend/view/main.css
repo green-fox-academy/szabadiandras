@@ -59,16 +59,24 @@ header {
 }
 
 .arena>h1 {
-  color: #2AAF62
+  color: #2AAF62;
+  padding-left: 50px;
 }
 
 .arenafooter {
   display: flex;
   flex-direction: row;
+  padding-left: 50px;
 }
 
 .arenafooter>a {
   padding: 5px;
+}
+
+.arena>p {
+  margin: 5px;
+  padding-left: 50px;
+  color: grey;
 }
 
 main {
@@ -76,12 +84,12 @@ main {
   background: rgb(0, 189, 0);
 }
 
-.feed {
+.post {
   display: flex;
   background-color: white;
   grid-column: span 2;
   grid-row: span 10;
-  height: 1800px;
+  height: 200px;
 }
 
 .about {
@@ -148,4 +156,20 @@ footer>a {
   color: grey;
   padding: 5px;
   font-size: 20px;
+}
+
+li {
+  padding: 10px;
+  margin-left: 50px;
+  font-size: 15pt;
+}
+
+.about > p {
+  padding: 10px;
+  margin-left: 50px;
+  font-size: 15pt;
+}
+
+h1:hover {
+  filter: brightness(80%);
 }
