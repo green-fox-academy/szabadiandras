@@ -24,7 +24,7 @@ let app = express();
 app.use(express.json());
 
 app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "./public/index.html"));
+  res.sendFile(path.join(__dirname, "./view/index.html"));
   console.log('Client request: "Main page".');
 });
 
