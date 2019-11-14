@@ -71,6 +71,7 @@ header {
 
 .arenafooter>a {
   padding: 5px;
+  text-decoration: none;
 }
 
 .arena>p {
@@ -79,9 +80,12 @@ header {
   color: grey;
 }
 
+.arenafooter>a:hover {
+  text-decoration: underline;
+}
+
 main {
   height: 600px;
-  background: rgb(0, 189, 0);
 }
 
 .post {
@@ -110,33 +114,13 @@ main {
   padding: 5px;
 }
 
-.submit {
-  grid-row: span 1;
-  height: 50px;
-  color: white;
-  background-color: #4AA3DF;
-  letter-spacing: 5px;
-  font-size: 12.5pt;
-  font-weight: bold;
-  border: none;
-}
-
-.submit:focus {
-  outline: 0px;
-}
-
-.submit:hover {
-  filter: brightness(110%);
-  transition: 0.25s;
-}
-
 a:hover {
   filter: brightness(80%);
   transition: 0.25s;
 }
 
-.submit:active {
-  filter: brightness(90%);
+a:active {
+  filter: brightness(65%);
   transition: 0.25s;
 }
 
@@ -162,9 +146,10 @@ li {
   padding: 10px;
   margin-left: 50px;
   font-size: 15pt;
+  text-decoration: none;
 }
 
-.about > p {
+.about>p {
   padding: 10px;
   margin-left: 50px;
   font-size: 15pt;
@@ -172,4 +157,73 @@ li {
 
 h1:hover {
   filter: brightness(80%);
+}
+
+.arenafooter > a:visited {
+  color: grey;
+  text-decoration: none;
+}
+
+.submit {
+  grid-row: span 1;
+  height: 50px;
+  color: white;
+  background-color: #4AA3DF;
+  letter-spacing: 5px;
+  font-size: 12.5pt;
+  font-weight: bold;
+  border: none;
+}
+
+.submit:focus {
+  outline: 0px;
+}
+
+.submit:hover {
+  filter: brightness(110%);
+  transition: 0.25s;
+}
+
+.submit:active {
+  filter: brightness(90%);
+  transition: 0.25s;
+}
+
+.submit > a {
+  text-decoration: none
+}
+
+.submit > a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.cancel {
+  background-color: rgb(226, 59, 59);
+}
+
+.cancel > a {
+  color: white;
+}
+
+.cancel:visited {
+  color: white;
+  text-decoration: none;
+}
+
+input {
+  padding: 20px;
+  border-radius: 5px;
+  margin: 10px;
+  border: none;
+}
+
+.comments {
+  color: #4AA3DF;
+  text-decoration: none;
+}
+
+.comments:visited {
+  color: #4AA3DF;
+  text-decoration: none;
 }
