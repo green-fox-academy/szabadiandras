@@ -46,7 +46,7 @@ app.get("/posts", (req, res) => {
     res.setHeader("Content-type", "application/json");
     res.status(200);
     res.send({ posts: posts });
-    console.log('Client request: "Get API".');
+    console.log('Client request: "Get posts".');
   });
 });
 

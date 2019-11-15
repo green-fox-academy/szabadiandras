@@ -297,4 +297,7 @@ form>p {
   color: #4AA3DF;
 }
 
+.delete:hover {
+  color: rgb(226, 59, 59);
+}
 /*@media screen*/
