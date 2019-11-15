@@ -3,6 +3,11 @@ const express = require("express");
 const path = require("path");
 const PORT = 8080;
 
+const env = require("dotenv").config();
+const bodyParser = require("body-parser");
+
+// ^ End of requirements //
+
 let conn = mysql.createConnection({
   host: "127.0.0.1",
   user: "root",
@@ -40,7 +45,7 @@ app.get("/posts", (req, res) => {
   conn.query(query, (err, posts) => {
     res.setHeader("Content-type", "application/json");
     res.status(200);
-    res.send(JSON.stringify(posts));
+    res.send({ posts: posts });
     console.log('Client request: "Get API".');
   });
 });

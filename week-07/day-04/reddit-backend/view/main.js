@@ -1,5 +1,11 @@
 'use strict';
 
+let index = new XMLHttpRequest();
+
+index.open('GET', 'http://localhost:8080/posts', true);
+
+
+
 const upvote = document.querySelector(".upvote");
 const downvote = document.querySelector(".downvote");
 const score = document.querySelector(".score")
