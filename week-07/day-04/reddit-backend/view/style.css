@@ -185,6 +185,7 @@ li {
 
 h1:hover {
   filter: brightness(80%);
+  cursor: pointer;
 }
 
 .arenafooter>a:visited {
