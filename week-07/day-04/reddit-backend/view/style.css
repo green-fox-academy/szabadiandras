@@ -71,7 +71,7 @@ header {
   display: flex;
   flex-flow: column;
   min-width: 800px;
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(235, 235, 235, 0.8);
 }
 
 .arena>h1 {
@@ -116,7 +116,7 @@ main {
   background-color: white;
   grid-column: span 1;
   grid-row: span 15;
-  background-color: rgb(235, 235, 235);
+  background-color: rgb(235, 235, 235, 0.8);
 }
 
 .about>h2 {
