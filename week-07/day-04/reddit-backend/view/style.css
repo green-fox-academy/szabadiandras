@@ -59,6 +59,8 @@ header {
   flex-grow: 2;
   background-color: white;
   flex-direction: column;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .navigation>div>img {
@@ -71,7 +73,6 @@ header {
   display: flex;
   flex-flow: column;
   min-width: 800px;
-  background-color: rgb(235, 235, 235, 0.8);
 }
 
 .arena>h1 {
@@ -106,10 +107,11 @@ main {
 
 .post {
   display: flex;
-  background-color: white;
+  background-color: whitesmoke;
   grid-column: span 2;
   grid-row: span 10;
   height: 200px;
+  border-radius: 10px;
 }
 
 .about {
@@ -117,13 +119,15 @@ main {
   grid-column: span 1;
   grid-row: span 15;
   background-color: rgb(235, 235, 235, 0.8);
+  border-radius: 10px;
 }
 
 .about>h2 {
   margin: 0px;
-  border: 0px;
   padding: 20px;
   background-color: whitesmoke;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .about>li {
@@ -203,6 +207,7 @@ h1:hover {
   font-weight: bold;
   border: none;
   width: 100%;
+  border-radius: 5px;
 }
 
 .submit:focus {
@@ -300,21 +305,22 @@ form>p {
 .delete:hover {
   color: rgb(226, 59, 59);
 }
+
 /*@media screen*/
 
 .logout {
   position: absolute;
   margin-left: 800px;
   text-decoration: none;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: grey;
   color: white;
   margin-top: 2px;
   padding: 8px 10px;
 }
 
-.logout:hover{
+.logout:hover {
   background-color: rgb(226, 59, 59);
-  border-radius: 10px;
+  border-radius: 5px;
   text-decoration: white;
 }
