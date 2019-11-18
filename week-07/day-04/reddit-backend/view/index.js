@@ -10,12 +10,10 @@ index.onload = function() {
   let response = JSON.parse(index.responseText);
   for (let i = 0; i < response.posts.length; i++) {
     let posts = document.createElement("div");
-
     let votes = document.createElement("div");
       let upvote = document.createElement("button");
       let score = document.createElement("p");
       let downvote = document.createElement("button");
-
     let content = document.createElement("div");
       let title = document.createElement("h1");
       let link = document.createElement("a");
@@ -28,9 +26,7 @@ index.onload = function() {
         let report = document.createElement("a");
         let modify = document.createElement("a");
         let remove = document.createElement("a");
-
     posts.classList.add("post");
-
     votes.classList.add("navigation");
       votes.setAttribute("id", response.posts[i].id);
       upvote.classList.add("upvote");
@@ -39,7 +35,6 @@ index.onload = function() {
       score.classList.add("score");
       downvote.classList.add("downvote");
       downvote.setAttribute("action", "down");
-
     content.classList.add("arena");
       title.innerText = response.posts[i].title;
       link.innerText = response.posts[i].url;
@@ -54,7 +49,6 @@ index.onload = function() {
       report.innerText = "report";
       modify.innerText = "modify";
       remove.innerText = "delete";
-
     main.appendChild(posts);
     posts.appendChild(votes);
     posts.appendChild(content);
@@ -100,5 +94,3 @@ score.addEventListener('click', function() {
 
 index.send();
 */
-
-index.send();
