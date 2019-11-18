@@ -33,6 +33,15 @@ app.get("/", function(req, res) {
   console.log('Client request: "Main page".');
 });
 
+// GET LOGIN
+
+app.get("/login", function(req, res) {
+  res.sendFile(path.join(__dirname, "./view/login.html"));
+  console.log('Client request: "Login page".');
+});
+
+//
+
 app.get("/hello", function(req, res) {
   console.log("hello world");
   res.send("Hello World");

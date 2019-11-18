@@ -301,3 +301,20 @@ form>p {
   color: rgb(226, 59, 59);
 }
 /*@media screen*/
+
+.logout {
+  position: absolute;
+  margin-left: 800px;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: grey;
+  color: white;
+  margin-top: 2px;
+  padding: 8px 10px;
+}
+
+.logout:hover{
+  background-color: rgb(226, 59, 59);
+  border-radius: 10px;
+  text-decoration: white;
+}
