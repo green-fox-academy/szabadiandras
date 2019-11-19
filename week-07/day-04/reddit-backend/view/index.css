@@ -16,6 +16,8 @@ header {
   width: 100%;
   height: 350px;
   background-image: url("./assets/banner.jpg");
+  box-shadow: 10px 10px 10px rgba(88, 88, 88, 0.363);
+  transition: 0.5s;
 }
 
 .logo img {
@@ -54,13 +56,14 @@ header {
 .navigation {
   padding: 50px;
   display: flex;
-  align-items: center;
-  /* !!! */
+  align-items: center; /* !!! */
   flex-grow: 2;
   background-color: white;
   flex-direction: column;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(160, 160, 160, 0.158);
+  transition: 0.5s;
 }
 
 .navigation>div>img {
@@ -73,6 +76,7 @@ header {
   display: flex;
   flex-flow: column;
   min-width: 800px;
+  border-radius: 10px;
 }
 
 .arena>h1 {
@@ -113,16 +117,21 @@ main {
   grid-row: span 10;
   height: 200px;
   border-radius: 10px;
-  margin: 10px;
+  margin: 25px 10px;
+  box-shadow: 10px 10px 10px rgba(128, 128, 128, 0.301);
 }
 
 .about {
-  background-color: white;
   grid-column: span 1;
   grid-row: span auto;
   background-color: rgb(235, 235, 235, 0.8);
   border-radius: 10px;
-  margin: 10px;
+  margin: 25px 10px;
+  box-shadow: 10px 10px 10px rgba(128, 128, 128, 0.301);
+  transition: 0.5s;
+  max-width: 450px;
+
+  border: solid 2px crimson;
 }
 
 .about>h2 {
@@ -131,6 +140,7 @@ main {
   background-color: whitesmoke;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(160, 160, 160, 0.158);
 }
 
 .about>li {
@@ -139,7 +149,7 @@ main {
 
 a:hover {
   filter: brightness(80%);
-  transition: 0.25s;
+  
 }
 
 div>img:hover {
@@ -155,7 +165,6 @@ div>img:active {
 
 a:active {
   filter: brightness(65%);
-  transition: 0.25s;
 }
 
 footer {
@@ -163,7 +172,7 @@ footer {
   justify-content: center;
   padding: 10px;
   background-color: rgb(192, 192, 192);
-  margin-top: 2000px;
+  margin-top: 2300px;
 }
 
 footer>a {
@@ -332,17 +341,11 @@ form>p {
 .upvote {
   background-image: url('./assets/upvote.png');
   background-repeat: no-repeat;
-  display: flex;
-  align-content: center;
-  align-items: center;
-  align-self: center;
-  justify-content: center;
-  justify-items: center;
-  justify-self: center;
   background-color: white;
   height: 100%;
   width: 100%;
   border: 0px;
+  border: solid 2px crimson;
 }
 
 .upvote:hover {
@@ -379,10 +382,31 @@ form>p {
 }
 
 a {
+  text-decoration: none;
   padding: 5px 0px 5px 20px;
+  color: #4AA3DF;
 }
 
 .time {
   text-decoration: none;
   color: rgb(180, 180, 180);
+}
+
+.options {
+  text-decoration: none;
+  color: rgb(80, 80, 80);
+}
+
+.options>a:hover {
+  text-decoration: underline;
+}
+
+.remove:hover {
+  color: rgb(226, 59, 59);
+}
+
+.post:hover {
+  transform: scale(1.015);
+  transition: 0.25s;
+  box-shadow: 0px 10px 23px -2px rgba(78, 78, 78, 0.507);
 }

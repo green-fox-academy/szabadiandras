@@ -27,31 +27,48 @@ index.onload = function() {
         let remove = document.createElement("a");
 
     posts.classList.add("post");
+
     votes.classList.add("navigation");
       votes.setAttribute("id", response.posts[i].id);
       upvote.classList.add("upvote");
       upvote.setAttribute("action", "up");
-      score.innerText = response.posts[i].score;
-      score.classList.add("score");
       downvote.classList.add("downvote");
       downvote.setAttribute("action", "down");
+      score.innerText = response.posts[i].score;
+      score.classList.add("score");
+
     content.classList.add("arena");
       title.innerText = response.posts[i].title;
+      
       link.innerText = response.posts[i].url;
-      link.setAttribute("href", response.posts[i].url);
+        link.setAttribute("href", response.posts[i].url);
+      
       timestamp.innerText = response.posts[i].timestamp
-      timestamp.setAttribute("href", response.posts[i].url);
-      timestamp.classList.add("time");
+        timestamp.setAttribute("href", response.posts[i].url);
+        timestamp.classList.add("time");
+      
       options.classList.add("options");
-      comments.innerText = "comments";
-      share.innerText = "share";
-      save.innerText = "save";
-      hide.innerText = "hide";
-      report.innerText = "report";
-      modify.innerText = "modify";
-      modify.setAttribute("href", "");
-      remove.innerText = "delete";
-      remove.setAttribute("href", "");
+        comments.innerText = "comments";
+          comments.setAttribute("href", "");
+          comments.classList.add("options");
+        share.innerText = "share";
+          share.setAttribute("href", "");
+          share.classList.add("options");
+        save.innerText = "save";
+          save.setAttribute("href", "");
+          save.classList.add("options");
+        hide.innerText = "hide";
+          hide.setAttribute("href", "");
+          hide.classList.add("options");
+        report.innerText = "report";
+          report.setAttribute("href", "");
+          report.classList.add("options");
+        modify.innerText = "modify";
+          modify.setAttribute("href", "");
+          modify.classList.add("options", "modify");
+        remove.innerText = "delete";
+          remove.setAttribute("href", "");
+          remove.classList.add("options", "remove");
 
     main.appendChild(posts);
     posts.appendChild(votes);
