@@ -44,11 +44,11 @@ header {
 
 #content {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(auto, 1fr);
   grid-gap: 15px;
   max-width: 100%;
-  padding: 20px 100px;
+  padding: 35px 200px;
 }
 
 .navigation {
@@ -122,6 +122,7 @@ main {
   grid-row: span auto;
   background-color: rgb(235, 235, 235, 0.8);
   border-radius: 10px;
+  margin: 10px;
 }
 
 .about>h2 {
@@ -162,7 +163,7 @@ footer {
   justify-content: center;
   padding: 10px;
   background-color: rgb(192, 192, 192);
-  margin-top: 4000px;
+  margin-top: 2000px;
 }
 
 footer>a {
@@ -210,6 +211,7 @@ h1:hover {
   border: none;
   width: 100%;
   border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .submit:focus {
@@ -378,4 +380,9 @@ form>p {
 
 a {
   padding: 5px 0px 5px 20px;
+}
+
+.time {
+  text-decoration: none;
+  color: rgb(180, 180, 180);
 }

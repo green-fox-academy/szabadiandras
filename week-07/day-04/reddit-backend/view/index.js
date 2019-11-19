@@ -1,14 +1,13 @@
 "use strict";
 
 let index = new XMLHttpRequest();
-
 index.open("GET", "http://localhost:8080/posts", true);
-
 let main = document.querySelector("article");
 
 index.onload = function() {
   let response = JSON.parse(index.responseText);
   for (let i = 0; i < response.posts.length; i++) {
+
     let posts = document.createElement("div");
     let votes = document.createElement("div");
       let upvote = document.createElement("button");
@@ -26,6 +25,7 @@ index.onload = function() {
         let report = document.createElement("a");
         let modify = document.createElement("a");
         let remove = document.createElement("a");
+
     posts.classList.add("post");
     votes.classList.add("navigation");
       votes.setAttribute("id", response.posts[i].id);
@@ -39,8 +39,9 @@ index.onload = function() {
       title.innerText = response.posts[i].title;
       link.innerText = response.posts[i].url;
       link.setAttribute("href", response.posts[i].url);
-      /*timestamp.innerHTML = respone.posts[i].timestamp;*/
-      /*timestamp.setAttribute("href", respone.posts[i].timestamp);*/
+      timestamp.innerText = response.posts[i].timestamp
+      timestamp.setAttribute("href", response.posts[i].url);
+      timestamp.classList.add("time");
       options.classList.add("options");
       comments.innerText = "comments";
       share.innerText = "share";
@@ -48,7 +49,9 @@ index.onload = function() {
       hide.innerText = "hide";
       report.innerText = "report";
       modify.innerText = "modify";
+      modify.setAttribute("href", "");
       remove.innerText = "delete";
+      remove.setAttribute("href", "");
 
     main.appendChild(posts);
     posts.appendChild(votes);
