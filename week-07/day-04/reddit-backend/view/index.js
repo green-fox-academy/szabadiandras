@@ -49,6 +49,7 @@ index.onload = function() {
       report.innerText = "report";
       modify.innerText = "modify";
       remove.innerText = "delete";
+
     main.appendChild(posts);
     posts.appendChild(votes);
     posts.appendChild(content);

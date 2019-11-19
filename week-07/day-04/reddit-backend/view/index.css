@@ -45,7 +45,7 @@ header {
 #content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(10, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
   grid-gap: 15px;
   max-width: 100%;
   padding: 20px 100px;
@@ -102,6 +102,7 @@ header {
 }
 
 main {
+  margin: 0px;
   height: 600px;
 }
 
@@ -118,7 +119,7 @@ main {
 .about {
   background-color: white;
   grid-column: span 1;
-  grid-row: span 15;
+  grid-row: span auto;
   background-color: rgb(235, 235, 235, 0.8);
   border-radius: 10px;
 }
@@ -161,7 +162,7 @@ footer {
   justify-content: center;
   padding: 10px;
   background-color: rgb(192, 192, 192);
-  margin-top: 200px;
+  margin-top: 4000px;
 }
 
 footer>a {
@@ -329,7 +330,6 @@ form>p {
 .upvote {
   background-image: url('./assets/upvote.png');
   background-repeat: no-repeat;
-  
   display: flex;
   align-content: center;
   align-items: center;
@@ -337,7 +337,6 @@ form>p {
   justify-content: center;
   justify-items: center;
   justify-self: center;
-
   background-color: white;
   height: 100%;
   width: 100%;
@@ -363,6 +362,18 @@ form>p {
   height: 100%;
   width: 100%;
   border: 0px;
+}
+
+.upvote:active {
+  background-image: url('./assets/upvoted.png');
+  outline: 0px;
+  cursor: pointer;
+}
+
+.downvote:active {
+  background-image: url('./assets/downvoted.png');
+  outline: 0px;
+  cursor: pointer;
 }
 
 a {
