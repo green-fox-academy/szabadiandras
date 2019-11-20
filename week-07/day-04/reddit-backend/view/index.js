@@ -62,13 +62,13 @@ index.onload = function() {
           hide.classList.add("options");
         report.innerText = "report";
           report.setAttribute("href", "");
-          report.classList.add("options");
+          report.classList.add("options", "warn");
         modify.innerText = "modify";
           modify.setAttribute("href", "");
           modify.classList.add("options", "modify");
         remove.innerText = "delete";
           remove.setAttribute("href", "");
-          remove.classList.add("options", "remove");
+          remove.classList.add("options", "remove", "warn");
 
     main.appendChild(posts);
     posts.appendChild(votes);

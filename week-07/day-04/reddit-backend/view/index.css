@@ -12,10 +12,10 @@ body {
 header {
   display: flex;
   align-items: center;
+  background-image: url("./assets/banner.jpg");
   justify-content: center;
   width: 100%;
   height: 350px;
-  background-image: url("./assets/banner.jpg");
   box-shadow: 10px 10px 10px rgba(88, 88, 88, 0.363);
   transition: 0.5s;
 }
@@ -119,6 +119,7 @@ main {
   border-radius: 10px;
   margin: 25px 10px;
   box-shadow: 10px 10px 10px rgba(128, 128, 128, 0.301);
+  transition: 0.5s;
 }
 
 .about {
@@ -131,7 +132,7 @@ main {
   transition: 0.5s;
   max-width: 450px;
 
-  border: solid 2px crimson;
+  
 }
 
 .about>h2 {
@@ -142,6 +143,12 @@ main {
   border-top-right-radius: 10px;
   box-shadow: 10px 10px 10px rgba(160, 160, 160, 0.158);
 }
+
+/*
+.about>ul, li, .about>p{
+  background: rgba(220, 20, 60, 0.363);
+ }
+ */
 
 .about>li {
   padding: 5px;
@@ -172,7 +179,7 @@ footer {
   justify-content: center;
   padding: 10px;
   background-color: rgb(192, 192, 192);
-  margin-top: 2300px;
+  margin-top: 2800px;
 }
 
 footer>a {
@@ -194,8 +201,7 @@ li {
 }
 
 .about>p {
-  padding: 10px;
-  margin-left: 50px;
+  padding: 10px 50px;
   font-size: 15pt;
 }
 
@@ -345,7 +351,6 @@ form>p {
   height: 100%;
   width: 100%;
   border: 0px;
-  border: solid 2px crimson;
 }
 
 .upvote:hover {
@@ -401,7 +406,7 @@ a {
   text-decoration: underline;
 }
 
-.remove:hover {
+.warn:hover {
   color: rgb(226, 59, 59);
 }
 
