@@ -15,7 +15,7 @@ header {
   background-image: url("../img/banner.jpg");
   justify-content: center;
   width: 100%;
-  height: 350px;
+  height: 250px;
   box-shadow: 10px 10px 10px rgba(88, 88, 88, 0.363);
   transition: 0.5s;
 }
@@ -281,6 +281,7 @@ input {
   margin: 10px;
   border: none;
   background-color: white;
+  transition: 0.3s;
 }
 
 input:focus {
@@ -321,7 +322,7 @@ form {
   padding: 40px 30px 10px 30px;
 
   border-radius: 10px;
-  margin: 25px 10px;
+  margin: 0px 10px;
   box-shadow: 10px 10px 10px rgba(128, 128, 128, 0.301);
   transition: 0.5s;
 }

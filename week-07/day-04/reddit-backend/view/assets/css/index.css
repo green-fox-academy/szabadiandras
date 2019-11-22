@@ -124,14 +124,15 @@ main {
 }
 
 .about {
+  margin: 15px 0px;
   grid-column: span 1;
   grid-row: span auto;
   background-color: rgb(235, 235, 235, 0.8);
   border-radius: 10px;
-  margin: 25px 10px;
   box-shadow: 10px 10px 10px rgba(128, 128, 128, 0.301);
   transition: 0.5s;
-  max-width: 450px;
+  min-width: 450px;
+  height: 450px;
 }
 
 .about>h2 {
@@ -141,6 +142,11 @@ main {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   box-shadow: 10px 10px 10px rgba(160, 160, 160, 0.158);
+}
+
+aside {
+  margin: 25px 10px;
+  max-width: 450px;
 }
 
 /*
@@ -153,7 +159,7 @@ main {
   padding: 5px;
 }
 
-a:hover {
+.link:hover, .time:hover {
   filter: brightness(80%);
 }
 
@@ -194,7 +200,7 @@ footer>a {
 li {
   padding: 10px;
   margin-left: 50px;
-  font-size: 15pt;
+  font-size: 12pt;
   text-decoration: none;
 }
 
@@ -225,6 +231,8 @@ h1:hover {
   width: 100%;
   border-radius: 5px;
   margin-bottom: 10px;
+
+  padding: 0px;
 }
 
 .submit:focus {
