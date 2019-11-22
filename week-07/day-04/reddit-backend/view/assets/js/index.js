@@ -93,18 +93,17 @@ index.onload = function() {
     options.appendChild(remove);
   }
     
-  // SCORING
+  // SCORING (to be implemented)
+  
   let upvote = document.querySelector('.upvote'); 
   upvote.addEventListener('click', function(e) {
     console.log(e);
     console.log('Upvote has been clicked.');  
   });
+  
   // END OF SCORING
+
 };
-
-
-
-
 
 index.send();
 
