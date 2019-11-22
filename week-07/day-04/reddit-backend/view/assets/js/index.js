@@ -34,17 +34,17 @@ index.onload = function() {
       
       upvote.classList.add("upvote");
       //upvote.setAttribute("action", "up");
-      upvote.setAttribute("id", response.posts[i].id);
-      upvote.setAttribute("value", "up");
+        upvote.setAttribute("id", response.posts[i].id);
+        upvote.setAttribute("value", "up");
 
       downvote.classList.add("downvote");
       //downvote.setAttribute("action", "down");
-      downvote.setAttribute("id", response.posts[i].id);
-      downvote.setAttribute("value", "down");
+        downvote.setAttribute("id", response.posts[i].id);
+        downvote.setAttribute("value", "down");
       
-      score.innerText = response.posts[i].score;
       score.classList.add("score");
-      score.setAttribute("id", response.posts[i].id);
+        score.innerText = response.posts[i].score;
+        score.setAttribute("id", response.posts[i].id);
 
     content.classList.add("arena");
       title.innerText = response.posts[i].title;
@@ -77,8 +77,7 @@ index.onload = function() {
         modify.innerText = "modify";
           modify.setAttribute("href", "");
           modify.classList.add("options", "modify");
-        
-          remove.innerText = "delete";
+        remove.innerText = "remove";
           remove.setAttribute("href", "");
           remove.setAttribute("value", "remove");
           remove.classList.add("options", "remove", "warn");
