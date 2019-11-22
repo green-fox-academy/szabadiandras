@@ -77,8 +77,10 @@ index.onload = function() {
         modify.innerText = "modify";
           modify.setAttribute("href", "");
           modify.classList.add("options", "modify");
-        remove.innerText = "delete";
+        
+          remove.innerText = "delete";
           remove.setAttribute("href", "");
+          remove.setAttribute("value", "remove");
           remove.classList.add("options", "remove", "warn");
 
     main.appendChild(posts);
@@ -104,7 +106,7 @@ index.onload = function() {
     
 index.send();
 
-// VOTING
+// USER ACTION CONTROL
 
 let scoreHandler = document.querySelector('article');
 
@@ -114,9 +116,10 @@ scoreHandler.addEventListener('click', function(event) {
   let postID = event.target.id;
   let action = event.target.value;
   let newRequest = new XMLHttpRequest();
-  
   let upvote = document.querySelector('.upvote');
- 
+  
+  // VOTING
+  
   if (postID !== undefined && action == 'up') {
     newRequest.open('PUT', `http://localhost:8080/posts/${postID}/upvote`, true);
     console.log(newRequest.responseText);
@@ -132,6 +135,16 @@ scoreHandler.addEventListener('click', function(event) {
     console.log(newRequest.responseText);
     console.log(event);
     console.log(`Downvote has been clicked on postID:${postID}`);
+    newRequest.send();
+  }
+  
+  // DELETE
+
+  if (postID !== undefined && action == 'remove') {
+    newRequest.open('PUT', `http://localhost:8080/posts/${postID}/remove`, true);
+    console.log(newRequest.responseText);
+    console.log(event);
+    console.log(`Post with postID:${postID} has been deleted`);
     newRequest.send();
   }
 });

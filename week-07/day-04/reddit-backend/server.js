@@ -147,7 +147,7 @@ app.put("/posts/:id/downvote", function(req, res) {
 
 //DELETE (optional)
 
-app.delete("/posts/:id", function(req, res) {
+app.delete("/posts/:id/remove", function(req, res) {
   const query = `DELETE FROM reddit.post WHERE id = ${req.params.id}`;
   conn.query(query, (err, post) => {
     console.log("Checking for errors: " + err);
