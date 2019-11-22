@@ -393,6 +393,10 @@ form>p {
   cursor: pointer;
 }
 
+.downvote:focus, .upvote:focus {
+  outline: 0px;
+}
+
 a {
   text-decoration: none;
   padding: 5px 0px 5px 20px;
@@ -405,6 +409,7 @@ a {
 }
 
 .options {
+  font-size: 13pt;
   text-decoration: none;
   color: rgb(80, 80, 80);
 }
@@ -413,9 +418,22 @@ a {
   text-decoration: underline;
 }
 
+.warn {
+  border: none;
+  background: none;
+  font-size: 13pt;
+  padding: 5px 0px 5px 20px;
+  margin-top: 3px;
+}
+
 .warn:hover {
   color: rgb(226, 59, 59);
+  text-decoration: underline;
 }
+
+.warn:focus {
+  outline: 0px;
+} 
 
 .post:hover {
   transform: scale(1.015);
@@ -425,4 +443,8 @@ a {
 
 button:hover {
   cursor: pointer;
+}
+
+.blurred {
+  filter: blur(5px);
 }

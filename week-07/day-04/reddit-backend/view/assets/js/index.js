@@ -129,6 +129,7 @@ scoreHandler.addEventListener('click', function(event) {
     console.log(`Upvote has been clicked on postID:${postID}`);
     console.log(scoreHandler);  
     console.log(response);
+
     newRequest.send();
   }
 
@@ -150,9 +151,6 @@ scoreHandler.addEventListener('click', function(event) {
     newRequest.send();
   }
 });
-
-
-
 
 
 
