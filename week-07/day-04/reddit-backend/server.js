@@ -37,7 +37,8 @@ app.get("/", function(req, res) {
 
 app.get("/login", function(req, res) {
   res.sendFile(path.join(__dirname, "./view/login.html"));
-  console.log('Client request: "Login page".');
+  console.log('Client request: "Login page".')
+  res.status(200);;
 });
 
 //
@@ -80,6 +81,14 @@ app.get("/posts/db", (req, res) => {
     res.send(JSON.stringify(posts));
     console.log('Client request: "Get Post database".');
   });
+});
+
+//GET FOR NEW POST
+
+app.get("/newpost", function(req, res) {
+  res.sendFile(path.join(__dirname, "./view/post.html"));
+  console.log('Client request: "New post".');
+  res.status(200);
 });
 
 //NEW POST

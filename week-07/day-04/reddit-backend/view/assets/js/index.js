@@ -74,23 +74,23 @@ index.onload = function() {
           remove.classList.add("options", "remove", "warn");
 
     main.appendChild(posts);
-    posts.appendChild(votes);
-    posts.appendChild(content);
-    votes.appendChild(upvote);
-    votes.appendChild(score);
-    votes.appendChild(downvote);
-    content.appendChild(title);
-    content.appendChild(link);
-    content.appendChild(timestamp);
-    content.appendChild(options);
-    options.appendChild(comments);
-    options.appendChild(comments);
-    options.appendChild(share);
-    options.appendChild(save);
-    options.appendChild(hide);
-    options.appendChild(report);
-    options.appendChild(modify);
-    options.appendChild(remove);
+      posts.appendChild(votes);
+        votes.appendChild(upvote);
+        votes.appendChild(score);
+        votes.appendChild(downvote);
+      posts.appendChild(content);
+        content.appendChild(title);
+        content.appendChild(link);
+        content.appendChild(timestamp);
+        content.appendChild(options);
+          options.appendChild(comments);
+          options.appendChild(comments);
+          options.appendChild(share);
+          options.appendChild(save);
+          options.appendChild(hide);
+          options.appendChild(report);
+          options.appendChild(modify);
+          options.appendChild(remove);
   };
 };
     
@@ -107,7 +107,7 @@ scoreHandler.addEventListener('click', function(event) {
   let newRequest = new XMLHttpRequest();
  
   if (scoreID !== undefined && action == 'up') {
-    newRequest.open('PUT', `http://localhost:8080/posts/${scoreID}/upvoted`, true);
+    newRequest.open('PUT', `http://localhost:8080/posts/${scoreID}/upvote`, true);
     console.log(newRequest.responseText);
     console.log(event);
     console.log('Upvote has been clicked.');  
@@ -115,12 +115,13 @@ scoreHandler.addEventListener('click', function(event) {
   }
 
   if (scoreID !== undefined && action == 'down') {
-    newRequest.open('PUT', `http://localhost:8080/posts/${scoreID}/downvoted`, true);
+    newRequest.open('PUT', `http://localhost:8080/posts/${scoreID}/downvote`, true);
     console.log(newRequest.responseText);
     console.log(event);
     console.log('Upvote has been clicked.');  
     newRequest.send();
   }
+  newRequest.send();
 });
 
 
