@@ -91,28 +91,38 @@ index.onload = function() {
     options.appendChild(report);
     options.appendChild(modify);
     options.appendChild(remove);
-  }
+  };
+};
     
-  // UPVOTING
-  
-  let scoreHandler = document.querySelector('article');
-  
-  scoreHandler.addEventListener('click', function(event) {
-    let scoreID = event.target.id;
-    let action = event.target.value;
-    let newRequest = new XMLHttpRequest();
-
-    if (scoreID !== undefined && action == 'up') {
-      newRequest.open('PUT', `http://localhost:8080/posts/${scoreID}/upvote`, true);
-
-      console.log(newRequest.responseText);
-      console.log(event);
-      console.log('Upvote has been clicked.');  
-    }
-  });
-
-
 index.send();
+
+
+// UPVOTING
+
+let scoreHandler = document.querySelector('article');
+
+scoreHandler.addEventListener('click', function(event) {
+  let scoreID = event.target.id;
+  let action = event.target.value;
+  let newRequest = new XMLHttpRequest();
+ 
+  if (scoreID !== undefined && action == 'up') {
+    newRequest.open('PUT', `http://localhost:8080/posts/${scoreID}/upvoted`, true);
+    console.log(newRequest.responseText);
+    console.log(event);
+    console.log('Upvote has been clicked.');  
+    newRequest.send();
+  }
+
+  if (scoreID !== undefined && action == 'down') {
+    newRequest.open('PUT', `http://localhost:8080/posts/${scoreID}/downvoted`, true);
+    console.log(newRequest.responseText);
+    console.log(event);
+    console.log('Upvote has been clicked.');  
+    newRequest.send();
+  }
+});
+
 
 
 

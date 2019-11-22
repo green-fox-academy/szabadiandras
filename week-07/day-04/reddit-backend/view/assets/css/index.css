@@ -382,13 +382,13 @@ form>p {
 }
 
 .upvote:active {
-  background-image: url('./assets/upvoted.png');
+  background-image: url('../img/upvoted.png');
   outline: 0px;
   cursor: pointer;
 }
 
 .downvote:active {
-  background-image: url('./assets/downvoted.png');
+  background-image: url('../img/downvoted.png');
   outline: 0px;
   cursor: pointer;
 }
