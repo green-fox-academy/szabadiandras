@@ -357,7 +357,7 @@ form>p {
   width: 100%;
   border: 0px;
 
-  border: 2px solid red;
+  /* border: 2px solid red;*/
 }
 
 .upvote:hover {

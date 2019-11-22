@@ -31,12 +31,20 @@ index.onload = function() {
 
     votes.classList.add("navigation");
       votes.setAttribute("id", response.posts[i].id);
+      
       upvote.classList.add("upvote");
-      upvote.setAttribute("action", "up");
+      //upvote.setAttribute("action", "up");
+      upvote.setAttribute("id", response.posts[i].id);
+      upvote.setAttribute("value", "up");
+
       downvote.classList.add("downvote");
-      downvote.setAttribute("action", "down");
+      //downvote.setAttribute("action", "down");
+      downvote.setAttribute("id", response.posts[i].id);
+      downvote.setAttribute("value", "down");
+      
       score.innerText = response.posts[i].score;
       score.classList.add("score");
+      score.setAttribute("id", response.posts[i].id);
 
     content.classList.add("arena");
       title.innerText = response.posts[i].title;
