@@ -121,7 +121,7 @@ app.put("/posts/:id/upvote", function(req, res) {
       res.status(200);
       res.send(JSON.stringify(post));
       console.log(
-        `Client request: "Upvote post called '${req.body.title}' in database".`
+        `Client request: "Upvote post called '${req.params.id}' in database".`
       );
     });
   });
@@ -139,7 +139,7 @@ app.put("/posts/:id/downvote", function(req, res) {
       res.status(200);
       res.send(JSON.stringify(post));
       console.log(
-        `Client request: "Upvote post called '${req.body.title}' in database".`
+        `Client request: "Upvote post called '${req.params.id}' in database".`
       );
     });
   });

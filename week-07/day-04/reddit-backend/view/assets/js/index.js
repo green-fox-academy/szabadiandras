@@ -104,29 +104,34 @@ index.onload = function() {
     
 index.send();
 
-// UPVOTING
+// VOTING
 
 let scoreHandler = document.querySelector('article');
 
 scoreHandler.addEventListener('click', function(event) {
-  let scoreID = event.target.id;
+  let response = JSON.parse(index.responseText);
+  let score = document.querySelector('.score');
+  let postID = event.target.id;
   let action = event.target.value;
   let newRequest = new XMLHttpRequest();
-  console.log(event);
+  
+  let upvote = document.querySelector('.upvote');
  
-  if (scoreID !== undefined && action == 'up') {
-    newRequest.open('PUT', `http://localhost:8080/posts/${scoreID}/upvote`, true);
+  if (postID !== undefined && action == 'up') {
+    newRequest.open('PUT', `http://localhost:8080/posts/${postID}/upvote`, true);
     console.log(newRequest.responseText);
     console.log(event);
-    console.log('Upvote has been clicked.');  
+    console.log(`Upvote has been clicked on postID:${postID}`);
+    console.log(scoreHandler);  
+    console.log(response);
     newRequest.send();
   }
 
-  if (scoreID !== undefined && action == 'down') {
-    newRequest.open('PUT', `http://localhost:8080/posts/${scoreID}/downvote`, true);
+  if (postID !== undefined && action == 'down') {
+    newRequest.open('PUT', `http://localhost:8080/posts/${postID}/downvote`, true);
     console.log(newRequest.responseText);
     console.log(event);
-    console.log('Upvote has been clicked.');  
+    console.log(`Downvote has been clicked on postID:${postID}`);
     newRequest.send();
   }
 });
@@ -141,19 +146,15 @@ const downvote = document.querySelector('.downvote');
 const score = document.querySelector('.score');
 let counter = 0;
 
-const upvote = document.querySelector('.upvote');
-upvote.addEventListener('click', function() {
-  console.log('Upvote has been clicked.');  
-});
+  const upvote = document.querySelector('.upvote');
+  upvote.addEventListener('click', function() {
+    console.log('Upvote has been clicked.');  
+  });
 
-downvote.addEventListener('click', function() {
-  console.log('Downvote has been clicked.');
-  score.innerHTML = counter -= 1;
-});
-
-score.addEventListener('click', function() {
-  console.log('Score clicked');
-});
+  downvote.addEventListener('click', function() {
+    console.log('Downvote has been clicked.');
+    score.innerHTML = counter -= 1;
+  });
 
 index.send();
 */
