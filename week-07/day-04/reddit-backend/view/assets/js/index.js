@@ -93,17 +93,24 @@ index.onload = function() {
     options.appendChild(remove);
   }
     
-  // SCORING (to be implemented)
+  // UPVOTING
   
-  let upvote = document.querySelector('.upvote'); 
-  upvote.addEventListener('click', function(e) {
-    console.log(e);
-    console.log('Upvote has been clicked.');  
-  });
+  let scoreHandler = document.querySelector('article');
   
-  // END OF SCORING
+  scoreHandler.addEventListener('click', function(event) {
+    let scoreID = event.target.id;
+    let action = event.target.value;
+    let newRequest = new XMLHttpRequest();
 
-};
+    if (scoreID !== undefined && action == 'up') {
+      newRequest.open('PUT', `http://localhost:8080/posts/${scoreID}/upvote`, true);
+
+      console.log(newRequest.responseText);
+      console.log(event);
+      console.log('Upvote has been clicked.');  
+    }
+  });
+
 
 index.send();
 
