@@ -104,6 +104,7 @@ scoreHandler.addEventListener('click', function(event) {
   let scoreID = event.target.id;
   let action = event.target.value;
   let newRequest = new XMLHttpRequest();
+  console.log(event);
  
   if (scoreID !== undefined && action == 'up') {
     newRequest.open('PUT', `http://localhost:8080/posts/${scoreID}/upvote`, true);
@@ -121,16 +122,6 @@ scoreHandler.addEventListener('click', function(event) {
     newRequest.send();
   }
 });
-
-// TESTING
-
-
-
-
-
-
-
-
 
 
 
