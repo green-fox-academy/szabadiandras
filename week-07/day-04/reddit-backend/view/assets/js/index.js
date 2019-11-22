@@ -25,7 +25,7 @@ index.onload = function() {
         let hide = document.createElement("a");
         let report = document.createElement("a");
         let modify = document.createElement("a");
-        let remove = document.createElement("a");
+        let remove = document.createElement("button");
 
     posts.classList.add("post");
 
@@ -80,6 +80,7 @@ index.onload = function() {
         remove.innerText = "remove";
           remove.setAttribute("href", "");
           remove.setAttribute("value", "remove");
+          remove.setAttribute("id", response.posts[i].id);
           remove.classList.add("options", "remove", "warn");
 
     main.appendChild(posts);
@@ -111,11 +112,13 @@ let scoreHandler = document.querySelector('article');
 
 scoreHandler.addEventListener('click', function(event) {
   let response = JSON.parse(index.responseText);
-  let score = document.querySelector('.score');
   let postID = event.target.id;
   let action = event.target.value;
   let newRequest = new XMLHttpRequest();
+
+  let score = document.querySelector('.score');
   let upvote = document.querySelector('.upvote');
+  let downvote = document.querySelector('.downvote');
   
   // VOTING
   
@@ -137,10 +140,10 @@ scoreHandler.addEventListener('click', function(event) {
     newRequest.send();
   }
   
-  // DELETE
+  // REMOVE
 
   if (postID !== undefined && action == 'remove') {
-    newRequest.open('PUT', `http://localhost:8080/posts/${postID}/remove`, true);
+    newRequest.open('DELETE', `http://localhost:8080/posts/${postID}/remove`, true);
     console.log(newRequest.responseText);
     console.log(event);
     console.log(`Post with postID:${postID} has been deleted`);
