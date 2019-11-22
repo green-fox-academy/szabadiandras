@@ -43,8 +43,8 @@ index.onload = function() {
         downvote.setAttribute("value", "down");
       
       score.classList.add("score");
-        score.innerText = response.posts[i].score;
         score.setAttribute("id", response.posts[i].id);
+        score.innerText = response.posts[i].score;
 
     content.classList.add("arena");
       title.innerText = response.posts[i].title;
