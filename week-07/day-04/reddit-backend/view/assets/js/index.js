@@ -96,7 +96,6 @@ index.onload = function() {
     
 index.send();
 
-
 // UPVOTING
 
 let scoreHandler = document.querySelector('article');
@@ -121,11 +120,9 @@ scoreHandler.addEventListener('click', function(event) {
     console.log('Upvote has been clicked.');  
     newRequest.send();
   }
-  newRequest.send();
 });
 
-
-
+// TESTING
 
 
 
