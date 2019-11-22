@@ -4,6 +4,7 @@ let index = new XMLHttpRequest();
 index.open("GET", "http://localhost:8080/posts", true);
 let main = document.querySelector("article");
 
+
 index.onload = function() {
   let response = JSON.parse(index.responseText);
   for (let i = 0; i < response.posts.length; i++) {
@@ -42,9 +43,11 @@ index.onload = function() {
       
       link.innerText = response.posts[i].url;
         link.setAttribute("href", response.posts[i].url);
+        link.classList.add("link");
       
-      timestamp.innerText = response.posts[i].timestamp
-        timestamp.setAttribute("href", response.posts[i].url);
+      const stamp = response.posts[i].timestamp;
+      timestamp.innerText = stamp;
+        timestamp.setAttribute("href", response.posts[i].timestamp);
         timestamp.classList.add("time");
       
       options.classList.add("options");
@@ -89,19 +92,45 @@ index.onload = function() {
     options.appendChild(modify);
     options.appendChild(remove);
   }
+    
+  // SCORING
+  let upvote = document.querySelector('.upvote'); 
+  upvote.addEventListener('click', function(e) {
+    console.log(e);
+    console.log('Upvote has been clicked.');  
+  });
+  // END OF SCORING
 };
+
+
+
+
 
 index.send();
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
-const upvote = document.querySelector('.upvote');
 const downvote = document.querySelector('.downvote');
 const score = document.querySelector('.score');
 let counter = 0;
 
+const upvote = document.querySelector('.upvote');
 upvote.addEventListener('click', function() {
-  console.log('Upvote has been clicked.');
-  score.innerHTML = counter += 1;
+  console.log('Upvote has been clicked.');  
 });
 
 downvote.addEventListener('click', function() {

@@ -154,7 +154,7 @@ app.delete("/posts/:id", function(req, res) {
   });
 });
 
-//PUT (optional)
+//MODIFY (optional)
 
 app.put("/posts/:id", function(req, res) {
   res.send(req.params.id);
