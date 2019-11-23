@@ -154,11 +154,6 @@ main {
   padding: 5px;
 }
 
-a:hover {
-  filter: brightness(80%);
-  
-}
-
 div>img:hover {
   filter: brightness(80%);
   transition: 0.25s;

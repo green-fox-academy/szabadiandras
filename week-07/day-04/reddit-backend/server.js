@@ -157,7 +157,7 @@ app.delete("/posts/:id/remove", function(req, res) {
       res.status(200);
       res.send(JSON.stringify(post));
       console.log(
-        `Client request: "Delete post with title '${req.body.title}' from database".`
+        `Client request: "Delete post with id: '${req.params.id}' from database".`
       );
     });
   });

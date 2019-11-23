@@ -26,12 +26,16 @@
         <h1>Add a new post</h1>
 
         <form action="http://localhost:8080/posts" method="POST">
+        
           <p>Title*:</p>
-          <input type="text" placeholder="Write title here..." class="newtitle" required>
+          <label for="title">Title*:</label>
+          <input type="text" placeholder="Write title here..." class="newtitle" required name="title" id="title">
+          
           <p>URL:</p>
-          <input type="text" placeholder="Ex.: www.9gag.com" class="url">
+          <label for="url">URL:</label>
+          <input type="text" placeholder="Ex.: www.9gag.com" class="url" name="url" id="url">
+          
           <div class="arenafooter">
-
           </div>
           <div class="buttons">
             <button class="submit" type="submit">SUBMIT</button>
