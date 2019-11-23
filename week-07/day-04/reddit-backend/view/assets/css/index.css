@@ -174,9 +174,6 @@ div>img:active {
   transition: 0.25s;
 }
 
-a:active {
-  filter: brightness(65%);
-}
 
 footer {
   display: flex;
@@ -418,7 +415,7 @@ a {
   text-decoration: underline;
 }
 
-.warn {
+.warn, .modify {
   border: none;
   background: none;
   font-size: 13pt;
@@ -426,12 +423,16 @@ a {
   margin-top: 3px;
 }
 
+.modify:hover {
+  text-decoration: underline;
+}
+
 .warn:hover {
   color: rgb(226, 59, 59);
   text-decoration: underline;
 }
 
-.warn:focus {
+.warn:focus, .modify:focus {
   outline: 0px;
 } 
 

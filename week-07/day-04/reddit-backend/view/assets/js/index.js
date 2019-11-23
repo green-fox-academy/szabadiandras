@@ -75,12 +75,15 @@ index.onload = function() {
           report.setAttribute("href", "");
           report.classList.add("options", "warn");
         modify.innerText = "modify";
-          modify.setAttribute("href", "");
+          modify.setAttribute("href", 'modify');
+          modify.setAttribute("value", "modify");
+          modify.setAttribute("id", response.posts[i].id);
           modify.classList.add("options", "modify");
         remove.innerText = "remove";
           remove.setAttribute("href", "");
           remove.setAttribute("value", "remove");
           remove.setAttribute("id", response.posts[i].id);
+          remove.setAttribute('onclick', "window.location.reload();")
           remove.classList.add("options", "remove", "warn");
 
     main.appendChild(posts);
@@ -138,6 +141,15 @@ scoreHandler.addEventListener('click', function(event) {
     console.log(newRequest.responseText);
     console.log(event);
     console.log(`Downvote has been clicked on postID:${postID}`);
+    newRequest.send();
+  }
+
+  // MODIFY
+
+  if (action == 'modify') {
+    modify.setAttribute("href", `posts/${postID}/modify`);
+    newRequest.open(`http://localhost:8080/posts/${postID}/modify`, true);
+    console.log(`Post with postID:${postID} is being edited`);
     newRequest.send();
   }
   

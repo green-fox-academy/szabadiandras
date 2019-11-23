@@ -5,6 +5,10 @@ const PORT = 8080;
 
 const env = require("dotenv").config();
 const bodyParser = require("body-parser");
+/*
+let jsonParser = bodyParser.json();
+... jsonParser ... in the code
+*/
 
 // ^ End of requirements //
 
@@ -27,17 +31,18 @@ conn.connect(function(err) {
 let app = express();
 app.use(express.json());
 app.use(express.static("view"));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "./view/index.html"));
-  console.log('Client request: "Main page".');
+  console.log('Client request: "Main page"');
 });
 
 // GET LOGIN
 
 app.get("/login", function(req, res) {
   res.sendFile(path.join(__dirname, "./view/login.html"));
-  console.log('Client request: "Login page".')
+  console.log('Client request: "Login page"')
   res.status(200);;
 });
 
@@ -56,7 +61,7 @@ app.get("/posts", (req, res) => {
     res.setHeader("Content-type", "application/json");
     res.status(200);
     res.send({ posts: posts });
-    console.log('Client request: "Get posts".');
+    console.log('Client request: "Get posts"');
   });
 });
 
@@ -67,7 +72,7 @@ app.get("/owner", (req, res) => {
   conn.query(query, (err, owner) => {
     res.status(200);
     res.send(JSON.stringify(owner));
-    console.log('Client request: "Get Owner database".');
+    console.log('Client request: "Get Owner database"');
   });
 });
 
@@ -83,11 +88,11 @@ app.get("/posts/db", (req, res) => {
   });
 });
 
-//GET FOR NEW POST
+//GET (NEW POST)
 
 app.get("/newpost", function(req, res) {
   res.sendFile(path.join(__dirname, "./view/post.html"));
-  console.log('Client request: "New post".');
+  console.log('Client request: "Submit new post"');
   res.status(200);
 });
 
@@ -102,9 +107,9 @@ app.post("/posts", function(req, res) {
     console.log(post);
     const query = `SELECT * FROM post WHERE id=${post.insertId}`;
     conn.query(query, (err, post) => {
-      res.setHeader("Content-type", "application/json");
+      // res.setHeader("Content-type", "application/json");
       res.status(200);
-      res.send(JSON.stringify(post));
+      res.sendFile(path.join(__dirname, "./view/index.html"));
     });
   });
 });
@@ -121,7 +126,7 @@ app.put("/posts/:id/upvote", function(req, res) {
       res.status(200);
       res.send(JSON.stringify(post));
       console.log(
-        `Client request: "Upvote post called '${req.params.id}' in database".`
+        `Client request: "Upvote post called for id'${req.params.id}' in database"`
       );
     });
   });
@@ -165,9 +170,31 @@ app.delete("/posts/:id/remove", function(req, res) {
 
 //MODIFY (optional)
 
-app.put("/posts/:id", function(req, res) {
-  res.send(req.params.id);
+app.get("/posts/:id/modify", function(req, res) {
+  res.sendFile(path.join(__dirname, "./view/modify.html"));
+  console.log('Client request: "Modify post"');
+  res.status(200);
 });
+
+//NEW POST
+
+//  app.post("/posts", function(req, res) {
+//    const dateObj = new Date();
+//    const date = `${dateObj.getFullYear()}-${dateObj.getMonth()}-${dateObj.getDate()} ${dateObj.getHours()}:${dateObj.getMinutes()}:${dateObj.getSeconds()}`;
+//    const query = `INSERT INTO reddit.post (title, url, timestamp, score) VALUES ('${req.body.title}', '${req.body.url}', '${date}', '0')`;
+//    conn.query(query, (err, post) => {
+//      console.log(err);
+//      console.log(post);
+//      const query = `SELECT * FROM post WHERE id=${post.insertId}`;
+//      conn.query(query, (err, post) => {
+//        res.setHeader("Content-type", "application/json");
+//        res.status(200);
+//        res.send(JSON.stringify(post));
+//      });
+//    });
+//  });
+
+// PORT
 
 app.listen(PORT, () => {
   console.log(`\nServer is running\nListening on port ${PORT}`);
