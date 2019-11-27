@@ -42,8 +42,8 @@ app.get("/", function(req, res) {
 
 app.get("/login", function(req, res) {
   res.sendFile(path.join(__dirname, "./view/login.html"));
-  console.log('Client request: "Login page"')
-  res.status(200);;
+  console.log('Client request: "Login page"');
+  res.status(200);
 });
 
 //
